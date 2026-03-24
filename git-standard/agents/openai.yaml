@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI Git Workflow"
+  short_description: "Inspect repos, audit commits, and guide safe Git actions"
+  default_prompt: "Use $git-workflow to inspect this repository, audit staged files, and prepare a safe Git commit or merge."
+policy:
+  allow_implicit_invocation: true
