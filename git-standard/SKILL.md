@@ -1,6 +1,6 @@
 ---
 name: git-workflow
-description: "Git repository inspection, commit preparation, commit message generation and validation, branch creation and merge workflow, pre-commit safety audits, commit language and style checks, .gitignore design, conflict resolution, and safe recovery guidance. Use when Codex needs to inspect repo state, compare branches or commits, create or merge feature branches, decide whether history uses Chinese, English, lightweight `type: description`, or Conventional Commits, validate or generate commit titles, audit staged files for secrets or generated output before committing, apply branch target rules where merging to `master` requires explicit user confirmation and merging to `develop` does not, manage ignore rules such as `node_modules` and build output, or take over after feature implementation or test completion to organize diffs and prepare clean Git actions. Triggers include 提交, 提交规范, conventional commits, commit message, commitlint, 分支, 创建分支, 合并分支, master, develop, push 前检查, 功能做完后整理改动, 测试完成后提交代码, secrets, .env, 冲突, 回滚, stash, reflog, cherry-pick, 构建产物, 临时文件, and 忽略规则."
+description: "Git repository inspection and safe workflow guidance for status checks, commit preparation, commit message validation, branch creation and merging, pre-commit audits, `.gitignore` rules, conflict resolution, and recovery steps. Use when working with Git history, branches, commits, merge targets such as `master` or `develop`, staged file safety checks, or post-implementation cleanup."
 ---
 
 # Git Workflow
