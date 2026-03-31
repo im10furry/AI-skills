@@ -37,11 +37,12 @@ type: description
 - `update: refresh docs landing copy`
 - `build: 升级 webpack 配置`
 
-## Validator
+## Manual Check
 
-```bash
-python scripts/validate_commit_message.py --style lightweight "fix: 修复接口超时问题"
-```
+- `type` 使用小写。
+- 只保留一个冒号分隔符。
+- 描述直接对应本次 staged diff。
+- 语言和最近提交历史保持一致。
 
 ## Notes
 

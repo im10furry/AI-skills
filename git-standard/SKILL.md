@@ -1,30 +1,28 @@
 ---
-name: git-workflow
-description: "Git repository inspection and safe workflow guidance for status checks, commit preparation, commit message validation, branch creation and merging, pre-commit audits, `.gitignore` rules, conflict resolution, and recovery steps. Use when working with Git history, branches, commits, merge targets such as `master` or `develop`, staged file safety checks, or post-implementation cleanup."
+name: "git commit"
+description: "Prepare safe Git commits with direct Git commands and plain-text guidance only. Use when inspecting repository state, staging focused changes, choosing a commit title style, auditing risky files, managing `.gitignore`, resolving conflicts, or merging into `develop` or `master`."
 ---
 
-# Git Workflow
+# Git Commit
 
-Use this skill inside existing Git repositories with safe defaults, explicit state checks, and minimal surprise. Inspect repository state before proposing or running any write operation.
+Use this skill inside existing Git repositories. This skill is text-first: rely on direct Git commands and manual reasoning, not helper scripts.
 
 ## Initial Inspection
 
-1. Run `python scripts/git_snapshot.py [repo-path]` from the target repository when available.
-2. If the script is unavailable or more detail is needed, inspect:
-   - `git status --short --branch`
+1. Start with:
+   - `git -c core.quotepath=false -c i18n.logOutputEncoding=utf8 status --short --branch`
    - `git branch --show-current`
    - `git remote -v`
    - `git log --oneline --decorate -n 8`
    - `git diff --stat`
-3. Call out:
+2. Call out:
    - current branch or detached HEAD
    - staged, unstaged, and untracked changes
-   - upstream tracking and ahead/behind state
+   - upstream tracking and ahead or behind state
    - ongoing merge, rebase, cherry-pick, or revert operations
    - recent commit message language tendency
-   - recent commit title style tendency: lightweight, conventional, shared-colon, or mixed
-
-On PowerShell or in repositories with non-ASCII file names, preserve UTF-8 output. Use the snapshot script or run Git with `-c core.quotepath=false -c i18n.logOutputEncoding=utf8`.
+   - recent commit title style tendency: lightweight, conventional, or mixed
+3. On PowerShell or with non-ASCII paths, keep the UTF-8 Git flags shown above.
 
 ## Safety Rules
 
@@ -46,28 +44,25 @@ On PowerShell or in repositories with non-ASCII file names, preserve UTF-8 outpu
    - Follow "Inspect Local State" or "Inspect History".
 2. Need to prepare commits?
    - Follow "Create A Focused Commit".
-3. Need to choose or validate a commit title style?
-   - Follow "Commit Title Styles" and use `python scripts/validate_commit_message.py --style <style> "<message>"`.
+3. Need to choose a commit title style?
+   - Follow "Commit Title Styles".
 4. Need to audit staged files before commit?
-   - Follow "Pre-Commit Audit" and use `python scripts/pre_commit_audit.py [repo-path] --scope staged`.
+   - Follow "Pre-Commit Audit".
 5. Need to create a branch or merge a branch?
-   - Follow "Create Or Merge Branches" and use `python scripts/branch_policy.py <target-branch>` before the merge if the target branch matters.
+   - Follow "Create Or Merge Branches".
 6. Need to take over after implementation or testing is done and turn local changes into clean Git operations?
    - Follow "Post-Implementation Git Handoff".
-7. Need to check whether the repository usually commits in Chinese or English?
-   - Run `python scripts/git_snapshot.py [repo-path] --commits 30` or `python scripts/analyze_commit_language.py [repo-path]`.
-8. Need to update a branch from remote or integrate another branch?
+7. Need to update a branch from remote or integrate another branch?
    - Follow "Sync Or Integrate Branches".
-9. Need to resolve conflicts?
+8. Need to resolve conflicts?
    - Follow "Resolve Conflicts".
-10. Need to add or fix `.gitignore` rules?
-   - Follow "Manage Ignore Rules" and read [references/gitignore-patterns.md](references/gitignore-patterns.md).
-11. Need to recover, undo, or rewrite history?
+9. Need to add or fix `.gitignore` rules?
+   - Read [references/gitignore-patterns.md](references/gitignore-patterns.md) and follow "Manage Ignore Rules".
+10. Need to recover, undo, or rewrite history?
    - Read [references/recovery-and-history-rewrite.md](references/recovery-and-history-rewrite.md) before changing anything.
 
 ## Inspect Local State
 
-- Run the snapshot script first.
 - Use `git diff` for unstaged changes and `git diff --cached` for staged changes.
 - Use `git branch -vv` to inspect tracking branches.
 - Use `git stash list` if the task might involve previously shelved work.
@@ -82,8 +77,7 @@ On PowerShell or in repositories with non-ASCII file names, preserve UTF-8 outpu
 - Use `git log --left-right --cherry-pick --oneline <base>...HEAD` to understand branch divergence.
 - Use `git blame <file>` only when line-level authorship matters.
 - Inspect recent commit subjects before writing a new one. Keep the existing language and style convention unless the user asks to change it.
-- If recent history is split between lightweight, conventional, or shared-colon subjects, report it as `mixed-convention` instead of forcing a migration.
-- Use `python scripts/analyze_commit_language.py [repo-path]` for a quick Chinese vs English summary over recent commit subjects.
+- If recent history is split between lightweight and conventional subjects, report it as `mixed-convention` instead of forcing a migration.
 
 ## Create A Focused Commit
 
@@ -93,14 +87,17 @@ On PowerShell or in repositories with non-ASCII file names, preserve UTF-8 outpu
 4. Inspect recent commit subjects and determine:
    - repository language tendency
    - repository commit title style tendency
-5. Run `python scripts/pre_commit_audit.py [repo-path] --scope staged` when staged files include env files, credentials, build output, binary artifacts, or when the user wants to commit "everything".
-6. Verify the staged diff with `git diff --cached` or `git diff --cached --stat`.
+5. Audit the staged file set with:
+   - `git diff --cached --name-only --diff-filter=ACMR`
+   - `git diff --cached --stat`
+   - `git diff --cached`
+6. If secrets or generated output are suspected, inspect the staged paths directly and use `rg` on those files when needed.
 7. Infer the title from the actual staged diff, not just the branch name or ticket title.
 8. Preserve the repository's existing commit style when it is clear.
 9. If the repository has no stronger convention, default to the lightweight `type: description` format described in [references/commit-message-convention.md](references/commit-message-convention.md).
 10. If the repository already uses Conventional Commits, the user asks for semantic titles, or release tooling depends on it, use [references/conventional-commits.md](references/conventional-commits.md).
-11. Validate the final title with `python scripts/validate_commit_message.py --style <style> "<message>"`.
-12. Re-run the snapshot script or `git status --short --branch` after committing.
+11. Commit with an explicit message, for example `git commit -m "fix: 修复登录页空白问题"`.
+12. Re-run `git status --short --branch` after committing.
 
 Prefer separate commits for unrelated concerns. Keep generated files separate from hand-edited source when they do not belong to the same logical change.
 
@@ -111,7 +108,6 @@ Prefer separate commits for unrelated concerns. Keep generated files separate fr
 Use this when the repository has no stronger standard or already uses simple `type: description` subjects.
 
 - Reference: [references/commit-message-convention.md](references/commit-message-convention.md)
-- Validate with: `python scripts/validate_commit_message.py --style lightweight "fix: 修复登录页空白问题"`
 - Allowed types: `fix`, `add`, `update`, `style`, `test`, `revert`, `build`
 - Prefer a concrete summary such as verb plus object.
 - Keep the title within about 50 characters when practical.
@@ -124,15 +120,14 @@ Examples:
 
 ### Conventional Commits
 
-Use this when recent history already uses `feat:` / `fix(scope):` style, the user explicitly requests it, or the repository uses release automation, changelog tooling, or commitlint.
+Use this when recent history already uses `feat:` or `fix(scope):` style, the user explicitly requests it, or the repository uses release automation, changelog tooling, or commitlint.
 
 - Reference: [references/conventional-commits.md](references/conventional-commits.md)
-- Validate with: `python scripts/validate_commit_message.py --style conventional "feat(auth): add passkey login"`
 - Common types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`
 - Use a scope only when it meaningfully narrows the subsystem.
 - Use `!` only for actual breaking changes.
 - Keep the subject line within about 72 characters when practical.
-- If a full Conventional Commit body or footer is needed, write it after the validated title. Explain why or document `BREAKING CHANGE:` only when it materially helps reviewers or tooling.
+- If a full Conventional Commit body or footer is needed, write it after the title.
 
 Examples:
 
@@ -142,40 +137,46 @@ Examples:
 
 ## Pre-Commit Audit
 
-Run `python scripts/pre_commit_audit.py [repo-path] --scope staged` before committing when the staged set looks broad or risky.
+Run this check before committing when the staged set looks broad or risky:
 
-- Treat high-risk findings as blockers:
-  - `.env` files
-  - private keys such as `id_rsa`, `*.pem`, `*.key`
-  - credential JSON files such as `credentials.json` or `service-account*.json`
-  - token or private key patterns detected in staged file content
-- Treat generated-output findings as verify-first warnings:
-  - `dist/`, `build/`, `coverage/`, `node_modules/`, `.next/`, `target/`, and similar directories
-  - large generated bundles or compiled artifacts
-- If generated files are intentionally committed, explain that intention before proceeding.
-- Re-run the audit after changing the staged file set.
+- `git diff --cached --name-only --diff-filter=ACMR`
+- `git diff --cached --stat`
+- `git diff --cached`
+
+Treat these as blockers:
+
+- `.env` files
+- private keys such as `id_rsa`, `*.pem`, `*.key`
+- credential JSON files such as `credentials.json` or `service-account*.json`
+- token or private key patterns detected in staged file content
+
+Treat these as verify-first warnings:
+
+- `dist/`, `build/`, `coverage/`, `node_modules/`, `.next/`, `target/`, and similar directories
+- large generated bundles or compiled artifacts
+
+If generated files are intentionally committed, explain that intention before proceeding.
 
 ## Post-Implementation Git Handoff
 
 Use this flow when coding work is already done and the next step is to turn the resulting changes into clean Git operations.
 
-1. Start with `python scripts/git_snapshot.py [repo-path]`.
-2. Inspect the changed files and diff shape:
-   - `git status --short --branch`
+1. Inspect the changed files and diff shape:
+   - `git -c core.quotepath=false -c i18n.logOutputEncoding=utf8 status --short --branch`
    - `git diff --stat`
    - `git diff`
    - `git diff --cached`
-3. Confirm what just happened:
+2. Confirm what just happened:
    - feature implementation finished
    - bug fix finished
    - tests were added or fixed
    - verification already passed or still needs to run
-4. Split unrelated changes before committing.
-5. Check the repository's commit language and title style convention.
-6. Stage only the files for one logical change.
-7. Audit the staged file set with `python scripts/pre_commit_audit.py [repo-path] --scope staged` when needed.
-8. Validate the commit title, then commit.
-9. If the next step is integration, apply the branch policy:
+3. Split unrelated changes before committing.
+4. Check the repository's commit language and title style convention.
+5. Stage only the files for one logical change.
+6. Audit the staged file set when needed.
+7. Choose the title, then commit.
+8. If the next step is integration, apply the branch policy:
    - merge to `develop` after inspection
    - stop for explicit confirmation before merging to `master`
 
@@ -196,14 +197,9 @@ Use this flow after requests like "功能做完了", "测试通过了", "开始�
 4. Before merging, inspect both the target branch and the feature branch:
    - `git log --oneline --decorate --graph <target>..HEAD`
    - `git diff --stat <target>...HEAD`
-5. Check the target branch policy:
-   - `python scripts/branch_policy.py develop` means no extra confirmation is required
-   - `python scripts/branch_policy.py master` means stop and ask the user before merging
-6. Merge into `develop` after inspection and verification:
-   - switch to `develop`
-   - merge with an explicit command such as `git merge --no-ff <feature-branch>` when merge commits are preferred
-7. Do not merge into `master` until the user explicitly confirms that target.
-8. After any merge, inspect `git status`, inspect the new history, and run relevant tests if the repository has them.
+5. Merge into `develop` only after inspection and verification.
+6. Do not merge into `master` until the user explicitly confirms that target.
+7. After any merge, inspect `git status`, inspect the new history, and run relevant tests if the repository has them.
 
 When the target branch is not `master` or `develop`, state the assumption you are making before merging.
 
@@ -258,11 +254,6 @@ Run targeted tests or at least a build or lint step after conflict resolution wh
 
 ## Resources
 
-- `scripts/git_snapshot.py`: Capture branch, upstream, status counts, remotes, recent commits, stashes, in-progress Git operations, and commit format tendencies.
-- `scripts/analyze_commit_language.py`: Classify recent commit subjects as Chinese, English, mixed, or other, then report the dominant language convention.
-- `scripts/branch_policy.py`: Report whether a target branch requires explicit user confirmation before merge. `master` requires confirmation; `develop` does not.
-- `scripts/validate_commit_message.py`: Validate lightweight or Conventional Commit titles with explicit style selection.
-- `scripts/pre_commit_audit.py`: Audit staged or changed paths for likely secrets, generated output, and large accidental artifacts.
 - [references/commit-message-convention.md](references/commit-message-convention.md): Lightweight commit title convention for repositories without a stronger standard.
 - [references/conventional-commits.md](references/conventional-commits.md): Conventional Commit format, type guidance, and breaking-change examples.
 - [references/gitignore-patterns.md](references/gitignore-patterns.md): Common `.gitignore` patterns and guidance for Node.js, build output, temp files, logs, editors, and tracked-file cleanup.

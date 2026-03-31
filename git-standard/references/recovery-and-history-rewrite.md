@@ -4,10 +4,9 @@ Read this file before reset, revert, stash recovery, reflog recovery, amend, reb
 
 ## Start With A Snapshot
 
-1. Run `python scripts/git_snapshot.py [repo-path]`.
-2. Inspect `git status --short --branch`.
-3. Inspect `git log --oneline --decorate -n 10`.
-4. Inspect `git reflog -n 20` when commits may have moved or disappeared.
+1. Inspect `git -c core.quotepath=false -c i18n.logOutputEncoding=utf8 status --short --branch`.
+2. Inspect `git log --oneline --decorate -n 10`.
+3. Inspect `git reflog -n 20` when commits may have moved or disappeared.
 
 ## Prefer The Least Destructive Tool
 

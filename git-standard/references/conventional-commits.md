@@ -47,11 +47,12 @@ type: description
 - `docs(readme): clarify merge workflow`
 - `ci(actions): cache pnpm store`
 
-## Validator
+## Manual Check
 
-```bash
-python scripts/validate_commit_message.py --style conventional "feat(auth): add passkey login"
-```
+- `type(scope)!: description` 里的 `scope` 和 `!` 都是可选项。
+- `type` 必须能从实际改动中解释清楚。
+- 只有真正的破坏性变更才使用 `!`。
+- 如果仓库历史明显更偏向轻量 `type: description`，不要擅自切换规范。
 
 ## Notes
 
