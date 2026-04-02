@@ -1,0 +1,4 @@
+interface:
+  display_name: "ESP-IDF 开发"
+  short_description: "ESP32/ESP-IDF 编译、配置、OTA 与组件开发"
+  default_prompt: "Use $esp-idf-dev to configure, build, flash, package, or extend an ESP32 ESP-IDF project."
