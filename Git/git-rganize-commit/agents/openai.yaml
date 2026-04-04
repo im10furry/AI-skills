@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Reorganize Commit"
+  short_description: "Normalize Git history and prepare focused commits"
+  default_prompt: "Use $git-rganize-commit to reorganize Git history with parallel agent analysis and split dirty changes into focused commits."
