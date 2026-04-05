@@ -1,0 +1,4 @@
+interface:
+  display_name: "法律文档"
+  short_description: "统一处理 NDA、用户协议、隐私政策、CLA 与开源许可证，并按需读取对应子目录参考"
+  default_prompt: "Use $legal-documents to route a legal-document drafting or review task and read only the relevant subdirectory references."
