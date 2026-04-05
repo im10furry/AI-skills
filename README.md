@@ -3,7 +3,7 @@
 > 把常用工作流整理成可复用的 skill，让重复问题不再重复解释。
 
 `AI-skills` 是一个偏实战向的技能仓库，我自己会反复用到、也希望以后能持续扩展的 AI skill。
-目前内容集中在四条主线：
+目前内容集中在五条主线：
 
 - `Git` 工作流整理
 - `ESP32 / ESP-IDF` 开发支持
@@ -52,9 +52,9 @@
 
 | Skill | 作用 |
 | --- | --- |
-| `open-source-license` | 处理开源许可证选型、兼容性筛查、仓库落地与发布前合规检查 |
-| `user-agreement` | 处理用户协议 / 服务条款的起草、改写、条款补全和产品场景映射 |
-| `confidentiality-agreement` | 处理保密协议 / NDA 的起草、审阅、谈判红线和披露流程检查 |
+| `legal-documents` | 法律文档与开源合规材料的统一入口，先判断文档类型，再路由到 `NDA`、用户协议、隐私政策、`CLA`、开源许可证等对应参考资料 |
+
+注：目录名是 `License/`，当前对外暴露的 skill 名是 `legal-documents`。
 
 ### `Research` 分支
 
@@ -89,19 +89,16 @@ AI-skills/
 │     ├─ SKILL.md
 │     ├─ agents/
 │     └─ references/
+├─ Mock/
 ├─ License/
-│  ├─ Open Source License/
-│  │  ├─ SKILL.md
-│  │  ├─ agents/
-│  │  └─ references/
-│  ├─ User Agreement/
-│  │  ├─ SKILL.md
-│  │  ├─ agents/
-│  │  └─ references/
-│  └─ Confidentiality Agreement/
-│     ├─ SKILL.md
-│     ├─ agents/
-│     └─ references/
+│  ├─ SKILL.md
+│  ├─ agents/
+│  └─ references/
+│     ├─ confidentiality-agreement/
+│     ├─ contributor-license-agreement/
+│     ├─ open-source-license/
+│     ├─ privacy-policy/
+│     └─ user-agreement/
 └─ Git/
    ├─ git-init/
    │  └─ SKILL.md
