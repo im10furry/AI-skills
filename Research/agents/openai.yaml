@@ -1,0 +1,6 @@
+interface:
+  display_name: "research"
+  short_description: "Unified entry for market, feature, product, and current-state research"
+  default_prompt: "Use $research to structure this research task, choose the right research path, and produce a clear recommendation."
+policy:
+  allow_implicit_invocation: true
