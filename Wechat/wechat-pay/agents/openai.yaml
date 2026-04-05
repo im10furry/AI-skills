@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信支付开发"
+  short_description: "按需查阅微信支付官方文档、开发规则、SDK 与示例资料"
+  default_prompt: "Use $wechat-pay to answer a WeChat Pay integration question with official docs, rules, and examples."

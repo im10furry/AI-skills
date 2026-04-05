@@ -1,0 +1,1914 @@
+# 微信支付官方文档索引快照
+
+- 生成时间：2026-04-05T01:50:42+08:00
+- 生成方式：`python scripts/build_official_index.py`
+- 说明：该文件只做入口索引与快照记录。涉及精确参数、签名、证书、回调字段时，仍以对应官方页面为准。
+
+## 产品介绍
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012062524
+- 官方更新时间：2025.07.15
+- 页面大纲：
+  - 1、产品概述
+  - 2、JSAPI支付模式介绍
+  - 3、准入条件
+  - 4、结算规则
+  - 5、资金提现
+- 侧边栏子文档：
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012062524
+  - 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015423216
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791870
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791869
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791852
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/merchant/4013069884
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791830
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791873
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791893
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012077201
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品文档 > 支付产品 > 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4016780043
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4013070992
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071204
+  - 产品文档 > 支付产品 > JSAPI支付 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012062524
+  - 产品文档 > 支付产品 > JSAPI支付 > 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015423216
+  - 产品文档 > 支付产品 > JSAPI支付 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791870
+  - 产品文档 > 支付产品 > JSAPI支付 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4012791855
+  - 产品文档 > 支付产品 > JSAPI支付 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791869
+  - 产品文档 > 支付产品 > JSAPI支付 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4013287009
+- 页面内关键官方链接：
+  - 各主体权限对照说明：https://pay.weixin.qq.com/doc/v3/merchant/4015420731
+
+## 开发指引
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012791870
+- 官方更新时间：2026.02.28
+- 页面大纲：
+  - 1、整体业务开发流程概览
+  - 2、详细步骤说明
+  - 2.1、商户下单
+  - 2.2、商户调起支付
+  - 2.3、用户支付
+  - 2.4、商户对账
+  - 2.5、订单退款
+  - 3、普通支付订单状态流转图
+- 侧边栏子文档：
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012062524
+  - 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015423216
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791870
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791869
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791852
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/merchant/4013069884
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791830
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791873
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791893
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012077201
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品文档 > 支付产品 > 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4016780043
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4013070992
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071204
+  - 产品文档 > 支付产品 > JSAPI支付 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012062524
+  - 产品文档 > 支付产品 > JSAPI支付 > 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015423216
+  - 产品文档 > 支付产品 > JSAPI支付 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791870
+  - 产品文档 > 支付产品 > JSAPI支付 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4012791855
+  - 产品文档 > 支付产品 > JSAPI支付 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791869
+  - 产品文档 > 支付产品 > JSAPI支付 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4013287009
+- 页面内关键官方链接：
+  - JSAPI/小程序下单：https://pay.weixin.qq.com/doc/v3/merchant/4012791856
+  - WeixinJSBridge：https://pay.weixin.qq.com/doc/v3/merchant/4012791857
+  - 查询订单API：https://pay.weixin.qq.com/doc/v3/merchant/4012791859
+  - 支付成功回调通知：https://pay.weixin.qq.com/doc/v3/merchant/4012791861
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075249
+  - 下载交易账单：https://pay.weixin.qq.com/doc/v3/merchant/4012791866
+  - 退款接口：https://pay.weixin.qq.com/doc/v3/merchant/4012791862
+  - 参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068676
+  - 配置了JSAPI支付授权目录：https://pay.weixin.qq.com/doc/v3/merchant/4013287088
+  - JSAPI调起支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791857
+  - 支付成功回调：https://pay.weixin.qq.com/doc/v3/merchant/4012791861
+  - 关闭订单API：https://pay.weixin.qq.com/doc/v3/merchant/4012791860
+  - 账单产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071215
+  - 退款产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071001
+  - 查询订单：https://pay.weixin.qq.com/doc/v3/merchant/4012791859
+  - 关单接口：https://pay.weixin.qq.com/doc/v3/merchant/4012791860
+  - 申请退款接口：https://pay.weixin.qq.com/doc/v3/merchant/4012791862
+  - 查询退款单接口：https://pay.weixin.qq.com/doc/v3/merchant/4012791863
+
+## 常见问题
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012791869
+- 官方更新时间：2026.03.11
+- 页面大纲：
+  - 技术常见问题
+  - 前端报错
+  - 后端报错（接口）
+- 侧边栏子文档：
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012062524
+  - 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015423216
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791870
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791869
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791852
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/merchant/4013069884
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791830
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791873
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791893
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012077201
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品文档 > 支付产品 > 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4016780043
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4013070992
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071204
+  - 产品文档 > 支付产品 > JSAPI支付 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012062524
+  - 产品文档 > 支付产品 > JSAPI支付 > 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015423216
+  - 产品文档 > 支付产品 > JSAPI支付 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791870
+  - 产品文档 > 支付产品 > JSAPI支付 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4012791855
+  - 产品文档 > 支付产品 > JSAPI支付 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791869
+  - 产品文档 > 支付产品 > JSAPI支付 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4013287009
+- 页面内关键官方链接：
+  - 配置JSAPI支付目录：https://pay.weixin.qq.com/doc/v3/merchant/4013287088
+  - 小程序调起支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791898
+  - APP调起支付：https://pay.weixin.qq.com/doc/v3/merchant/4013070351
+  - JSAPI调起支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791857
+  - 小游戏虚拟支付：https://developers.weixin.qq.com/minigame/dev/guide/open-ability/virtual-payment/guide.html
+  - JSAPI下单：https://pay.weixin.qq.com/doc/v3/merchant/4012791856
+  - 参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068676
+  - 快速开始-步骤4：https://pay.weixin.qq.com/doc/v3/merchant/4015423216
+  - 申请资金账单接口：https://pay.weixin.qq.com/doc/v3/merchant/4012791867
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+  - 如何计算签名：https://pay.weixin.qq.com/doc/v3/merchant/4012365336#4.-%E8%AE%BE%E7%BD%AEHTTP%E5%A4%B4
+  - 签名探测流量：https://pay.weixin.qq.com/doc/v3/merchant/4013053420#5.-%E5%BA%94%E5%AF%B9%E7%AD%BE%E5%90%8D%E6%8E%A2%E6%B5%8B%E6%B5%81%E9%87%8F
+
+## SDK
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012076498
+- 官方更新时间：2024.11.25
+- 页面大纲：
+  - 微信 OpenSDK
+  - 服务端 SDK
+  - 社区 SDK
+  - 接下来阅读
+- 侧边栏子文档：
+  - SDK：https://pay.weixin.qq.com/doc/v3/merchant/4012076498
+  - 使用 Java SDK：https://pay.weixin.qq.com/doc/v3/merchant/4012076506
+  - 使用 PHP SDK：https://pay.weixin.qq.com/doc/v3/merchant/4012076511
+  - 使用 Go SDK：https://pay.weixin.qq.com/doc/v3/merchant/4012076515
+  - 验签工具：https://pay.weixin.qq.com/doc/v3/merchant/4012076525
+  - 平台证书下载工具：https://pay.weixin.qq.com/doc/v3/merchant/4012076524
+  - Postman调试工具：https://pay.weixin.qq.com/doc/v3/merchant/4012076519
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012076542
+  - 网络问题排查指南：https://pay.weixin.qq.com/doc/v3/merchant/4012076543
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012076544
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012076556
+  - 诊断链接绑定指引：https://pay.weixin.qq.com/doc/v3/merchant/4012076558
+  - 安全联系人设置指引：https://pay.weixin.qq.com/doc/v3/merchant/4012076563
+  - Go：https://pay.weixin.qq.com/doc/v3/merchant/4015119334
+  - Java：https://pay.weixin.qq.com/doc/v3/merchant/4014931831
+- 目录树相关页：
+  - SDK&开发工具 > 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4012076504
+  - SDK&开发工具 > 开发工具：https://pay.weixin.qq.com/doc/v3/merchant/4019552692
+  - SDK&开发工具 > 网络云排查：https://pay.weixin.qq.com/doc/v3/merchant/4012076533
+  - SDK&开发工具 > 安全医生：https://pay.weixin.qq.com/doc/v3/merchant/4012076551
+  - SDK&开发工具 > 微信支付开发助手：https://pay.weixin.qq.com/doc/v3/merchant/4014105546
+  - SDK&开发工具 > 示例代码：https://pay.weixin.qq.com/doc/v3/merchant/4014931830
+  - SDK&开发工具 > 快速开始 > SDK：https://pay.weixin.qq.com/doc/v3/merchant/4012076498
+  - SDK&开发工具 > 快速开始 > 使用 Java SDK：https://pay.weixin.qq.com/doc/v3/merchant/4012076506
+  - SDK&开发工具 > 快速开始 > 使用 PHP SDK：https://pay.weixin.qq.com/doc/v3/merchant/4012076511
+  - SDK&开发工具 > 快速开始 > 使用 Go SDK：https://pay.weixin.qq.com/doc/v3/merchant/4012076515
+- 页面内关键官方链接：
+  - JS-SDK：https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html
+  - 小程序：https://developers.weixin.qq.com/miniprogram/dev/api/payment/wx.requestPayment.html
+  - iOS：https://developers.weixin.qq.com/doc/oplatform/Downloads/iOS_Resource.html
+  - Android：https://developers.weixin.qq.com/doc/oplatform/Downloads/Android_Resource.html
+  - wechatpay-java：https://github.com/wechatpay-apiv3/wechatpay-java
+  - Maven Central：https://central.sonatype.com/artifact/com.github.wechatpay-apiv3/wechatpay-java/
+  - wechatpay-php：https://github.com/wechatpay-apiv3/wechatpay-php
+  - Packagist：https://packagist.org/packages/wechatpay/wechatpay
+  - wechatpay-go：https://github.com/wechatpay-apiv3/wechatpay-go
+  - pkg.go.dev：https://pkg.go.dev/github.com/wechatpay-apiv3/wechatpay-go
+  - wechatpay-java业务接口介绍：https://github.com/wechatpay-apiv3/wechatpay-java/tree/main/service
+  - wechatpay-go业务接口介绍：https://github.com/wechatpay-apiv3/wechatpay-go/tree/main/services
+  - 微信支付开发者社区：https://developers.weixin.qq.com/community/pay/doc/00022e47830e90adbd2c507c951801
+  - Java：https://pay.weixin.qq.com/doc/v3/merchant/4012076506
+  - PHP：https://pay.weixin.qq.com/doc/v3/merchant/4012076511
+  - Go：https://pay.weixin.qq.com/doc/v3/merchant/4012076515
+  - Postman 调试工具：https://pay.weixin.qq.com/doc/v3/merchant/4012076519
+
+## 支付回调和查单实现指引
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012075249
+- 官方更新时间：2024.12.18
+- 页面大纲：
+  - 1.背景
+  - 2.目标
+  - 3.方案概述
+  - 4.前端支付返回处理
+  - 4.1.公众号、小程序、App支付
+  - 4.2.H5支付
+  - 4.3.NATIVE支付
+  - 5.后端服务处理
+  - 5.1.支付回调处理
+  - 5.2.定时轮询查单
+  - 5.3.T+1日对账处理
+  - 6.常见问题
+  - 1、前端返回如何区分是成功返回，还是用户取消支付或者异常？
+  - 2、如何判断微信支付查单接口返回的订单状态是支付成功？
+- 侧边栏子文档：
+  - APIv3概述：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+  - 跨城冗灾升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075113
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075249
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075393
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+  - 国家商用密码简介：https://pay.weixin.qq.com/doc/v3/merchant/4012075987
+  - 获取国家商用密码证书和密钥：https://pay.weixin.qq.com/doc/v3/merchant/4012076002
+  - APIv3接口使用国家商用密码指引：https://pay.weixin.qq.com/doc/v3/merchant/4012076194
+  - 开户银行全称对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076270
+  - 开户银行对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076294
+  - 银行类型对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076355
+  - 省市区编号对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076371
+  - 优惠费率活动对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076387
+  - 跨境电商二级商户费率对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076403
+  - 商户行业编码：https://pay.weixin.qq.com/doc/v3/merchant/4012076423
+  - 特殊行业ID对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076444
+  - 接入模式：https://pay.weixin.qq.com/doc/v3/merchant/4012068443
+  - 支付产品：https://pay.weixin.qq.com/doc/v3/merchant/4012068590
+  - 业务平台：https://pay.weixin.qq.com/doc/v3/merchant/4012068615
+  - 业务系统：https://pay.weixin.qq.com/doc/v3/merchant/4012068672
+  - 参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068676
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4016179629
+  - 交易投诉运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012587539
+- 目录树相关页：
+  - 通用规则 > 开发须知：https://pay.weixin.qq.com/doc/v3/merchant/4013051083
+  - 通用规则 > 最佳实践：https://pay.weixin.qq.com/doc/v3/merchant/4012067303
+  - 通用规则 > 国家商用密码接入指南：https://pay.weixin.qq.com/doc/v3/merchant/4012067312
+  - 通用规则 > 对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012067347
+  - 通用规则 > 名词表：https://pay.weixin.qq.com/doc/v3/merchant/4012067283
+  - 通用规则 > 服务运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012067272
+  - 通用规则 > 微信支付免密服务相关协议：https://pay.weixin.qq.com/doc/v3/merchant/4012858017
+  - 通用规则 > 最佳实践 > 跨城冗灾升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075113
+  - 通用规则 > 最佳实践 > 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075249
+  - 通用规则 > 最佳实践 > 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075393
+  - 通用规则 > 最佳实践 > 回调通知注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+  - 通用规则 > 最佳实践 > API安全最佳实践：https://pay.weixin.qq.com/doc/v3/merchant/4012067296
+- 页面内关键官方链接：
+  - 微信支付查单接口：https://pay.weixin.qq.com/doc/v3/merchant/4012791858
+  - 后端服务处理：https://pay.weixin.qq.com/doc/v3/merchant/4012075249#5.%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1%E5%A4%84%E7%90%86
+  - JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791856
+  - 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791897
+  - App支付：https://pay.weixin.qq.com/doc/v3/merchant/4013070347
+  - 接口规范：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+  - 关单接口：https://pay.weixin.qq.com/doc/v3/merchant/4012791860
+  - 微信支付对账单下载接口：https://pay.weixin.qq.com/doc/v3/merchant/4012791866
+
+## 回调通知注意事项
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+- 官方更新时间：2024.07.25
+- 页面大纲：
+  - 1. notify_url填写注意事项
+  - 2. 回调处理逻辑注意事项
+  - 3、商户接收回调失败常见场景
+  - 一、回调地址配置类问题
+  - 二、网络与服务器连通性问题
+  - 三、其他特殊场景
+- 侧边栏子文档：
+  - APIv3概述：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+  - 跨城冗灾升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075113
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075249
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075393
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+  - 国家商用密码简介：https://pay.weixin.qq.com/doc/v3/merchant/4012075987
+  - 获取国家商用密码证书和密钥：https://pay.weixin.qq.com/doc/v3/merchant/4012076002
+  - APIv3接口使用国家商用密码指引：https://pay.weixin.qq.com/doc/v3/merchant/4012076194
+  - 开户银行全称对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076270
+  - 开户银行对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076294
+  - 银行类型对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076355
+  - 省市区编号对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076371
+  - 优惠费率活动对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076387
+  - 跨境电商二级商户费率对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076403
+  - 商户行业编码：https://pay.weixin.qq.com/doc/v3/merchant/4012076423
+  - 特殊行业ID对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076444
+  - 接入模式：https://pay.weixin.qq.com/doc/v3/merchant/4012068443
+  - 支付产品：https://pay.weixin.qq.com/doc/v3/merchant/4012068590
+  - 业务平台：https://pay.weixin.qq.com/doc/v3/merchant/4012068615
+  - 业务系统：https://pay.weixin.qq.com/doc/v3/merchant/4012068672
+  - 参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068676
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4016179629
+  - 交易投诉运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012587539
+- 目录树相关页：
+  - 通用规则 > 开发须知：https://pay.weixin.qq.com/doc/v3/merchant/4013051083
+  - 通用规则 > 最佳实践：https://pay.weixin.qq.com/doc/v3/merchant/4012067303
+  - 通用规则 > 国家商用密码接入指南：https://pay.weixin.qq.com/doc/v3/merchant/4012067312
+  - 通用规则 > 对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012067347
+  - 通用规则 > 名词表：https://pay.weixin.qq.com/doc/v3/merchant/4012067283
+  - 通用规则 > 服务运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012067272
+  - 通用规则 > 微信支付免密服务相关协议：https://pay.weixin.qq.com/doc/v3/merchant/4012858017
+  - 通用规则 > 最佳实践 > 跨城冗灾升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075113
+  - 通用规则 > 最佳实践 > 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075249
+  - 通用规则 > 最佳实践 > 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075393
+  - 通用规则 > 最佳实践 > 回调通知注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+  - 通用规则 > 最佳实践 > API安全最佳实践：https://pay.weixin.qq.com/doc/v3/merchant/4012067296
+- 页面内关键官方链接：
+  - 回调处理逻辑注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420#2.-%E5%9B%9E%E8%B0%83%E5%A4%84%E7%90%86%E9%80%BB%E8%BE%91%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9
+
+## APIv3概述
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+- 官方更新时间：2024.11.21
+- 页面大纲：
+  - 关于 APIv3
+  - 如何接入APIv3
+  - 联系我们
+- 侧边栏子文档：
+  - APIv3概述：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+  - 跨城冗灾升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075113
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075249
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075393
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+  - 国家商用密码简介：https://pay.weixin.qq.com/doc/v3/merchant/4012075987
+  - 获取国家商用密码证书和密钥：https://pay.weixin.qq.com/doc/v3/merchant/4012076002
+  - APIv3接口使用国家商用密码指引：https://pay.weixin.qq.com/doc/v3/merchant/4012076194
+  - 开户银行全称对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076270
+  - 开户银行对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076294
+  - 银行类型对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076355
+  - 省市区编号对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076371
+  - 优惠费率活动对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076387
+  - 跨境电商二级商户费率对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076403
+  - 商户行业编码：https://pay.weixin.qq.com/doc/v3/merchant/4012076423
+  - 特殊行业ID对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076444
+  - 接入模式：https://pay.weixin.qq.com/doc/v3/merchant/4012068443
+  - 支付产品：https://pay.weixin.qq.com/doc/v3/merchant/4012068590
+  - 业务平台：https://pay.weixin.qq.com/doc/v3/merchant/4012068615
+  - 业务系统：https://pay.weixin.qq.com/doc/v3/merchant/4012068672
+  - 参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068676
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4016179629
+  - 交易投诉运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012587539
+- 目录树相关页：
+  - 通用规则 > 开发须知：https://pay.weixin.qq.com/doc/v3/merchant/4013051083
+  - 通用规则 > 最佳实践：https://pay.weixin.qq.com/doc/v3/merchant/4012067303
+  - 通用规则 > 国家商用密码接入指南：https://pay.weixin.qq.com/doc/v3/merchant/4012067312
+  - 通用规则 > 对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012067347
+  - 通用规则 > 名词表：https://pay.weixin.qq.com/doc/v3/merchant/4012067283
+  - 通用规则 > 服务运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012067272
+  - 通用规则 > 微信支付免密服务相关协议：https://pay.weixin.qq.com/doc/v3/merchant/4012858017
+  - 通用规则 > 开发须知 > APIv3概述：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 通用规则 > 开发须知 > 接口规则说明：https://pay.weixin.qq.com/doc/v3/merchant/4012081706
+  - 通用规则 > 开发须知 > 开发参数申请和配置：https://pay.weixin.qq.com/doc/v3/merchant/4012067284
+  - 通用规则 > 开发须知 > 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+  - 通用规则 > 开发须知 > 如何签名：https://pay.weixin.qq.com/doc/v3/merchant/4013051105
+  - 通用规则 > 开发须知 > 如何验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053004
+  - 通用规则 > 开发须知 > 如何加解密敏感字段：https://pay.weixin.qq.com/doc/v3/merchant/4013053016
+  - 通用规则 > 开发须知：https://pay.weixin.qq.com/doc/v3/merchant/4013053022
+  - 通用规则 > 开发须知 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013053045
+- 页面内关键官方链接：
+  - 申请商户API证书：https://pay.weixin.qq.com/doc/v3/merchant/4012072428
+  - 如何使用微信支付公钥验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053249
+  - Java：https://pay.weixin.qq.com/doc/v3/merchant/4014931831
+  - Go：https://pay.weixin.qq.com/doc/v3/merchant/4015119334
+  - Postman调试工具：https://pay.weixin.qq.com/doc/v3/merchant/4012076519
+  - 平台证书下载工具：https://pay.weixin.qq.com/doc/v3/merchant/4012076524
+  - 开发者社区：https://developers.weixin.qq.com/community/pay
+
+## 总述-APIv3如何签名和验签
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+- 官方更新时间：2024.11.21
+- 页面大纲：
+  - 概述
+  - 1. 什么时候需要签名？如何签名？
+  - 1.1 请求微信支付接口
+  - 1.2 调起支付
+  - 2. 什么时候需要验签？如何验签？
+  - 2.1 接收微信支付应答
+  - 2.2 接收微信支付回调请求
+- 侧边栏子文档：
+  - APIv3概述：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+  - 跨城冗灾升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075113
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075249
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075393
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+  - 国家商用密码简介：https://pay.weixin.qq.com/doc/v3/merchant/4012075987
+  - 获取国家商用密码证书和密钥：https://pay.weixin.qq.com/doc/v3/merchant/4012076002
+  - APIv3接口使用国家商用密码指引：https://pay.weixin.qq.com/doc/v3/merchant/4012076194
+  - 开户银行全称对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076270
+  - 开户银行对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076294
+  - 银行类型对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076355
+  - 省市区编号对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076371
+  - 优惠费率活动对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076387
+  - 跨境电商二级商户费率对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076403
+  - 商户行业编码：https://pay.weixin.qq.com/doc/v3/merchant/4012076423
+  - 特殊行业ID对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076444
+  - 接入模式：https://pay.weixin.qq.com/doc/v3/merchant/4012068443
+  - 支付产品：https://pay.weixin.qq.com/doc/v3/merchant/4012068590
+  - 业务平台：https://pay.weixin.qq.com/doc/v3/merchant/4012068615
+  - 业务系统：https://pay.weixin.qq.com/doc/v3/merchant/4012068672
+  - 参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068676
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4016179629
+  - 交易投诉运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012587539
+- 目录树相关页：
+  - 通用规则 > 开发须知：https://pay.weixin.qq.com/doc/v3/merchant/4013051083
+  - 通用规则 > 最佳实践：https://pay.weixin.qq.com/doc/v3/merchant/4012067303
+  - 通用规则 > 国家商用密码接入指南：https://pay.weixin.qq.com/doc/v3/merchant/4012067312
+  - 通用规则 > 对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012067347
+  - 通用规则 > 名词表：https://pay.weixin.qq.com/doc/v3/merchant/4012067283
+  - 通用规则 > 服务运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012067272
+  - 通用规则 > 微信支付免密服务相关协议：https://pay.weixin.qq.com/doc/v3/merchant/4012858017
+  - 通用规则 > 开发须知 > APIv3概述：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 通用规则 > 开发须知 > 接口规则说明：https://pay.weixin.qq.com/doc/v3/merchant/4012081706
+  - 通用规则 > 开发须知 > 开发参数申请和配置：https://pay.weixin.qq.com/doc/v3/merchant/4012067284
+  - 通用规则 > 开发须知 > 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+  - 通用规则 > 开发须知 > 如何签名：https://pay.weixin.qq.com/doc/v3/merchant/4013051105
+  - 通用规则 > 开发须知 > 如何验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053004
+  - 通用规则 > 开发须知 > 如何加解密敏感字段：https://pay.weixin.qq.com/doc/v3/merchant/4013053016
+  - 通用规则 > 开发须知：https://pay.weixin.qq.com/doc/v3/merchant/4013053022
+  - 通用规则 > 开发须知 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013053045
+- 页面内关键官方链接：
+  - 申请商户API证书：https://pay.weixin.qq.com/doc/v3/merchant/4012072428
+  - 请求参数里带Path参数（路径参数），如何计算签名：https://pay.weixin.qq.com/doc/v3/merchant/4012365334
+  - 请求参数里带Body参数(包体参数），如何计算签名：https://pay.weixin.qq.com/doc/v3/merchant/4012365336
+  - 请求参数里有Query（查询参数），如何计算签名：https://pay.weixin.qq.com/doc/v3/merchant/4012365337
+  - 图片上传接口，如何计算签名：https://pay.weixin.qq.com/doc/v3/merchant/4012365335
+  - JSAPI调起支付签名：https://pay.weixin.qq.com/doc/v3/merchant/4012365339
+  - APP调起支付签名：https://pay.weixin.qq.com/doc/v3/merchant/4012365340
+  - 小程序调起支付签名：https://pay.weixin.qq.com/doc/v3/merchant/4012365341
+  - 微信支付公钥如何验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053249
+  - 如何使用平台证书验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053420
+  - 如何解密微信支付回调报文：https://pay.weixin.qq.com/doc/v3/merchant/4012071382
+  - 如何使用微信支付公钥验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053249
+  - 如何使用平台证书验签名：https://pay.weixin.qq.com/doc/v3/merchant/4013053420
+
+## 接入模式
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012068443
+- 官方更新时间：2024.07.25
+- 页面大纲：
+  - 普通商户模式
+  - 服务商模式
+  - 银行服务商
+  - 渠道商
+- 侧边栏子文档：
+  - APIv3概述：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+  - 跨城冗灾升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075113
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075249
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075393
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+  - 国家商用密码简介：https://pay.weixin.qq.com/doc/v3/merchant/4012075987
+  - 获取国家商用密码证书和密钥：https://pay.weixin.qq.com/doc/v3/merchant/4012076002
+  - APIv3接口使用国家商用密码指引：https://pay.weixin.qq.com/doc/v3/merchant/4012076194
+  - 开户银行全称对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076270
+  - 开户银行对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076294
+  - 银行类型对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076355
+  - 省市区编号对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076371
+  - 优惠费率活动对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076387
+  - 跨境电商二级商户费率对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076403
+  - 商户行业编码：https://pay.weixin.qq.com/doc/v3/merchant/4012076423
+  - 特殊行业ID对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076444
+  - 接入模式：https://pay.weixin.qq.com/doc/v3/merchant/4012068443
+  - 支付产品：https://pay.weixin.qq.com/doc/v3/merchant/4012068590
+  - 业务平台：https://pay.weixin.qq.com/doc/v3/merchant/4012068615
+  - 业务系统：https://pay.weixin.qq.com/doc/v3/merchant/4012068672
+  - 参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068676
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4016179629
+  - 交易投诉运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012587539
+- 目录树相关页：
+  - 通用规则 > 开发须知：https://pay.weixin.qq.com/doc/v3/merchant/4013051083
+  - 通用规则 > 最佳实践：https://pay.weixin.qq.com/doc/v3/merchant/4012067303
+  - 通用规则 > 国家商用密码接入指南：https://pay.weixin.qq.com/doc/v3/merchant/4012067312
+  - 通用规则 > 对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012067347
+  - 通用规则 > 名词表：https://pay.weixin.qq.com/doc/v3/merchant/4012067283
+  - 通用规则 > 服务运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012067272
+  - 通用规则 > 微信支付免密服务相关协议：https://pay.weixin.qq.com/doc/v3/merchant/4012858017
+  - 通用规则 > 名词表 > 接入模式：https://pay.weixin.qq.com/doc/v3/merchant/4012068443
+  - 通用规则 > 名词表 > 支付产品：https://pay.weixin.qq.com/doc/v3/merchant/4012068590
+  - 通用规则 > 名词表 > 业务平台：https://pay.weixin.qq.com/doc/v3/merchant/4012068615
+  - 通用规则 > 名词表 > 业务系统：https://pay.weixin.qq.com/doc/v3/merchant/4012068672
+  - 通用规则 > 名词表 > 参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068676
+  - 通用规则 > 名词表 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4016179629
+- 页面内关键官方链接：
+  - 参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068676
+
+## 产品介绍
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4013070158
+- 官方更新时间：2025.11.18
+- 页面大纲：
+  - 1、产品概述
+  - 2、APP支付示例说明
+  - 3、准入条件
+  - 4、结算规则
+  - 5、资金提现
+- 侧边栏子文档：
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013070158
+  - 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015478291
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013070176
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013070182
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791852
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/merchant/4013069884
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791830
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791873
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791893
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012077201
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品文档 > 支付产品 > 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4016780043
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4013070992
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071204
+  - 产品文档 > 支付产品 > APP支付 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013070158
+  - 产品文档 > 支付产品 > APP支付 > 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015478291
+  - 产品文档 > 支付产品 > APP支付 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013070176
+  - 产品文档 > 支付产品 > APP支付 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4013070180
+  - 产品文档 > 支付产品 > APP支付 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013070182
+  - 产品文档 > 支付产品 > APP支付 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4013299889
+- 页面内关键官方链接：
+  - 各主体权限对照说明：https://pay.weixin.qq.com/doc/v3/merchant/4015477838
+  - 创建了移动应用类型：https://developers.weixin.qq.com/doc/oplatform/Mobile_App/guideline/create.html
+
+## 快速开始
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4015478291
+- 官方更新时间：2025.11.20
+- 页面大纲：
+  - 产品接入流程
+- 侧边栏子文档：
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013070158
+  - 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015478291
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013070176
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013070182
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791852
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/merchant/4013069884
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791830
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791873
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791893
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012077201
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品文档 > 支付产品 > 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4016780043
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4013070992
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071204
+  - 产品文档 > 支付产品 > APP支付 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013070158
+  - 产品文档 > 支付产品 > APP支付 > 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015478291
+  - 产品文档 > 支付产品 > APP支付 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013070176
+  - 产品文档 > 支付产品 > APP支付 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4013070180
+  - 产品文档 > 支付产品 > APP支付 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013070182
+  - 产品文档 > 支付产品 > APP支付 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4013299889
+- 页面内关键官方链接：
+  - 产品介绍文档：https://pay.weixin.qq.com/doc/v3/merchant/4013070158
+  - 创建移动应用appid指引：https://developers.weixin.qq.com/doc/oplatform/Mobile_App/guideline/create.html
+  - 应用包名和应用签名：https://developers.weixin.qq.com/miniprogram/dev/platform-capabilities/miniapp/handbook/build/open_android_cert.html
+  - Bundle ID：https://developers.weixin.qq.com/miniprogram/dev/platform-capabilities/miniapp/handbook/web/bundleid-guide.html
+  - Universal Links：https://developers.weixin.qq.com/miniprogram/dev/platform-capabilities/miniapp/handbook/web/universal-link-guide.html
+  - 已有商户号开通APP支付产品权限：https://pay.weixin.qq.com/doc/v3/merchant/4013070174#1%E3%80%81%E5%B7%B2%E6%9C%89%E5%95%86%E6%88%B7%E5%8F%B7%E7%94%B3%E8%AF%B7APP%E6%94%AF%E4%BB%98%E4%BA%A7%E5%93%81%E6%9D%83%E9%99%90
+  - 发起APPID授权绑定：https://pay.weixin.qq.com/doc/v3/merchant/4013289251#2.2%E3%80%81%E7%99%BB%E5%BD%95%E5%95%86%E6%88%B7%E5%B9%B3%E5%8F%B0%E5%8F%91%E8%B5%B7APPID%E7%9A%84%E6%8E%88%E6%9D%83%E7%BB%91%E5%AE%9A%E7%94%B3%E8%AF%B7
+  - 申请新商户号和APP支付权限：https://pay.weixin.qq.com/doc/v3/merchant/4013070174#2%E3%80%81%E7%94%B3%E8%AF%B7%E6%96%B0%E5%95%86%E6%88%B7%E5%8F%B7%E5%92%8CAPP%E6%94%AF%E4%BB%98%E4%BA%A7%E5%93%81%E6%9D%83%E9%99%90
+  - 各主体权限对照说明：https://pay.weixin.qq.com/doc/v3/merchant/4015477838
+  - 确认授权绑定的商户号：https://pay.weixin.qq.com/doc/v3/merchant/4013289251#2.3.3%E3%80%81%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8
+  - 配置技术负责人账号操作指引：https://pay.weixin.qq.com/doc/v3/merchant/4015423618
+  - 开发参数：https://pay.weixin.qq.com/doc/v3/merchant/4013070756
+  - 开发流程：https://pay.weixin.qq.com/doc/v3/merchant/4013070176
+  - 请求的唯一标识：https://pay.weixin.qq.com/doc/v3/merchant/4012081709#%E8%AF%B7%E6%B1%82%E7%9A%84%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86
+
+## 产品介绍
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012791832
+- 官方更新时间：2025.07.17
+- 页面大纲：
+  - 1、产品概述
+  - 2、H5支付模式介绍
+  - 3、准入条件
+  - 4、结算规则
+  - 5、资金提现
+- 侧边栏子文档：
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012791832
+  - 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015614193
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791831
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791845
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791852
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/merchant/4013069884
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791830
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791873
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791893
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012077201
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品文档 > 支付产品 > 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4016780043
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4013070992
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071204
+  - 产品文档 > 支付产品 > H5支付 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012791832
+  - 产品文档 > 支付产品 > H5支付 > 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015614193
+  - 产品文档 > 支付产品 > H5支付 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791831
+  - 产品文档 > 支付产品 > H5支付 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4012791833
+  - 产品文档 > 支付产品 > H5支付 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791845
+  - 产品文档 > 支付产品 > H5支付 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4013287171
+- 页面内关键官方链接：
+  - 各主体权限对照说明：https://pay.weixin.qq.com/doc/v3/merchant/4015616699
+
+## 产品介绍
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012791874
+- 官方更新时间：2025.07.17
+- 页面大纲：
+  - 1、产品概述
+  - 2、Native支付模式介绍
+  - 3、准入条件
+  - 4、结算规则
+  - 5、资金提现
+- 侧边栏子文档：
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012791874
+  - 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015614538
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791891
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791890
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791852
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/merchant/4013069884
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791830
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791873
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791893
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012077201
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品文档 > 支付产品 > 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4016780043
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4013070992
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071204
+  - 产品文档 > 支付产品 > Native支付 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012791874
+  - 产品文档 > 支付产品 > Native支付 > 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015614538
+  - 产品文档 > 支付产品 > Native支付 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791891
+  - 产品文档 > 支付产品 > Native支付 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4012791876
+  - 产品文档 > 支付产品 > Native支付 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791890
+  - 产品文档 > 支付产品 > Native支付 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4013287244
+- 页面内关键官方链接：
+  - 各主体权限对照说明：https://pay.weixin.qq.com/doc/v3/merchant/4015616698
+
+## 产品介绍
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012791894
+- 官方更新时间：2025.07.15
+- 页面大纲：
+  - 1、产品概述
+  - 2、小程序支付模式介绍
+  - 3、准入条件
+  - 4、结算规则
+  - 5、资金提现
+- 侧边栏子文档：
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012791894
+  - 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015459512
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791911
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791910
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791852
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/merchant/4013069884
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791830
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791873
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791893
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012077201
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品文档 > 支付产品 > 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4016780043
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4013070992
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071204
+  - 产品文档 > 支付产品 > 小程序支付 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012791894
+  - 产品文档 > 支付产品 > 小程序支付 > 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015459512
+  - 产品文档 > 支付产品 > 小程序支付 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791911
+  - 产品文档 > 支付产品 > 小程序支付 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4012791896
+  - 产品文档 > 支付产品 > 小程序支付 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791910
+  - 产品文档 > 支付产品 > 小程序支付 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4013287500
+- 页面内关键官方链接：
+  - 各主体权限对照说明：https://pay.weixin.qq.com/doc/v3/merchant/4015459054
+  - 《交易类小程序运营规范》：https://developers.weixin.qq.com/miniprogram/product/jiaoyilei/yunyingguifan.html
+
+## 快速开始
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4015459512
+- 官方更新时间：2025.12.08
+- 侧边栏子文档：
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012791894
+  - 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015459512
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791911
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791910
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791852
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/merchant/4013069884
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791830
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791873
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791893
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012077201
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品文档 > 支付产品 > 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4016780043
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4013070992
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071204
+  - 产品文档 > 支付产品 > 小程序支付 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012791894
+  - 产品文档 > 支付产品 > 小程序支付 > 快速开始：https://pay.weixin.qq.com/doc/v3/merchant/4015459512
+  - 产品文档 > 支付产品 > 小程序支付 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012791911
+  - 产品文档 > 支付产品 > 小程序支付 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4012791896
+  - 产品文档 > 支付产品 > 小程序支付 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012791910
+  - 产品文档 > 支付产品 > 小程序支付 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4013287500
+- 页面内关键官方链接：
+  - 产品介绍文档：https://pay.weixin.qq.com/doc/v3/merchant/4012791894
+  - 已有商户号开通JSAPI支付权限流程(小程序支付场景)：https://pay.weixin.qq.com/doc/v3/merchant/4012791895#1%E3%80%81%E5%B7%B2%E6%9C%89%E5%95%86%E6%88%B7%E5%8F%B7%E7%94%B3%E8%AF%B7JSAPI%E6%94%AF%E4%BB%98%E4%BA%A7%E5%93%81%E6%9D%83%E9%99%90
+  - 发起APPID的授权绑定：https://pay.weixin.qq.com/doc/v3/merchant/4013287504#2.2%E3%80%81%E7%99%BB%E5%BD%95%E5%95%86%E6%88%B7%E5%B9%B3%E5%8F%B0%E5%8F%91%E8%B5%B7APPID%E7%9A%84%E6%8E%88%E6%9D%83%E7%BB%91%E5%AE%9A%E7%94%B3%E8%AF%B7
+  - 申请新商户号和JSAPI支付权限(小程序支付场景)：https://pay.weixin.qq.com/doc/v3/merchant/4012791895#2%E3%80%81%E7%94%B3%E8%AF%B7%E6%96%B0%E5%95%86%E6%88%B7%E5%8F%B7%E5%92%8CJSAPI%E6%94%AF%E4%BB%98%E4%BA%A7%E5%93%81%E6%9D%83%E9%99%90
+  - 各主体权限对照说明：https://pay.weixin.qq.com/doc/v3/merchant/4015459054
+  - 确认授权绑定的商户号：https://pay.weixin.qq.com/doc/v3/merchant/4013287504#2.3.2%E3%80%81%E5%B0%8F%E7%A8%8B%E5%BA%8F
+  - 配置技术负责人账号操作指引：https://pay.weixin.qq.com/doc/v3/merchant/4015423618
+  - 开发参数：https://pay.weixin.qq.com/doc/v3/merchant/4013070756
+  - 开发流程：https://pay.weixin.qq.com/doc/v3/merchant/4012791911
+  - 请求的唯一标识：https://pay.weixin.qq.com/doc/v3/merchant/4012081709#%E8%AF%B7%E6%B1%82%E7%9A%84%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86
+  - 《交易类小程序运营规范》：https://developers.weixin.qq.com/miniprogram/product/jiaoyilei/yunyingguifan.html
+  - 订单发货管理功能：https://developers.weixin.qq.com/miniprogram/product/jiaoyilei/fahuoguanligongneng.html
+
+## 产品介绍
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4013071001
+- 官方更新时间：2025.06.27
+- 页面大纲：
+  - 1、产品概述
+  - 2、退款发起方式
+  - 3、订单退款规则
+  - 3.1、订单退款时间
+  - 3.2、全额或部分退款
+  - 3.3、退款资金路径
+  - 3.3、使用了代金券的订单退款规则
+  - 3.4、存在分账的订单退款规则
+- 侧边栏子文档：
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071001
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071031
+  - 业务示例代码：https://pay.weixin.qq.com/doc/v3/merchant/4015217336
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013071200
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791852
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/merchant/4013069884
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791830
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791873
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791893
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012077201
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品文档 > 支付产品 > 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4016780043
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4013070992
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071204
+  - 产品文档 > 支付产品 > 订单退款 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071001
+  - 产品文档 > 支付产品 > 订单退款 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071031
+  - 产品文档 > 支付产品 > 订单退款 > 业务示例代码：https://pay.weixin.qq.com/doc/v3/merchant/4015217336
+  - 产品文档 > 支付产品 > 订单退款 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4013071033
+  - 产品文档 > 支付产品 > 订单退款 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013071200
+  - 产品文档 > 支付产品 > 订单退款 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4014959630
+- 页面内关键官方链接：
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071031
+  - 分账介绍：https://pay.weixin.qq.com/doc/v3/merchant/4012067962
+
+## 开发指引
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4013071031
+- 官方更新时间：2025.06.20
+- 页面大纲：
+  - 1、整体业务开发流程概览
+  - 2、详细步骤说明
+  - 2.1、查询订单状态
+  - 2.2、申请退款
+  - 2.3、确认退款结果
+  - 2.4、发起异常退款
+  - 3、退款单状态流转图
+- 侧边栏子文档：
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071001
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071031
+  - 业务示例代码：https://pay.weixin.qq.com/doc/v3/merchant/4015217336
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013071200
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791852
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/merchant/4013069884
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791830
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791873
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791893
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012077201
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品文档 > 支付产品 > 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4016780043
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4013070992
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071204
+  - 产品文档 > 支付产品 > 订单退款 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071001
+  - 产品文档 > 支付产品 > 订单退款 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071031
+  - 产品文档 > 支付产品 > 订单退款 > 业务示例代码：https://pay.weixin.qq.com/doc/v3/merchant/4015217336
+  - 产品文档 > 支付产品 > 订单退款 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4013071033
+  - 产品文档 > 支付产品 > 订单退款 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013071200
+  - 产品文档 > 支付产品 > 订单退款 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4014959630
+- 页面内关键官方链接：
+  - 查询订单状态：https://pay.weixin.qq.com/doc/v3/merchant/4013070356
+  - 申请退款API：https://pay.weixin.qq.com/doc/v3/merchant/4013071036
+  - 查询单笔退款信息：https://pay.weixin.qq.com/doc/v3/merchant/4013071041
+  - 退款回调通知：https://pay.weixin.qq.com/doc/v3/merchant/4013071196
+  - 发起异常退款API：https://pay.weixin.qq.com/doc/v3/merchant/4013071193
+  - 微信支付订单号查询订单API：https://pay.weixin.qq.com/doc/v3/merchant/4013070354
+  - 商户订单号查询订单API：https://pay.weixin.qq.com/doc/v3/merchant/4013070356
+  - 退款结果通知：https://pay.weixin.qq.com/doc/v3/merchant/4013071196
+  - 申请退款：https://pay.weixin.qq.com/doc/v3/merchant/4013071036
+  - APIv3密钥设置方法：https://pay.weixin.qq.com/doc/v3/merchant/4013053267
+  - 查询单笔退款（按商户退款单号）：https://pay.weixin.qq.com/doc/v3/merchant/4013071041
+  - 退款申请API：https://pay.weixin.qq.com/doc/v3/merchant/4013071036
+  - 查询退款：https://pay.weixin.qq.com/doc/v3/merchant/4013071041
+  - 敏感信息加密：https://pay.weixin.qq.com/doc/v3/merchant/4013053257
+  - 退款申请：https://pay.weixin.qq.com/doc/v3/merchant/4013071036
+  - 发起异常退款：https://pay.weixin.qq.com/doc/v3/merchant/4013071193
+
+## 申请退款
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4013071036
+- 官方更新时间：2025.01.09
+- 页面大纲：
+  - 接口说明
+  - 请求参数 折叠全部参数
+  - 应答参数 折叠全部参数
+  - 错误码
+  - 公共错误码
+  - 业务错误码
+- 侧边栏子文档：
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071001
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071031
+  - 业务示例代码：https://pay.weixin.qq.com/doc/v3/merchant/4015217336
+  - 申请退款：https://pay.weixin.qq.com/doc/v3/merchant/4013071036
+  - 查询单笔退款（通过商户退款单号）：https://pay.weixin.qq.com/doc/v3/merchant/4013071041
+  - 发起异常退款：https://pay.weixin.qq.com/doc/v3/merchant/4013071193
+  - 退款结果通知：https://pay.weixin.qq.com/doc/v3/merchant/4013071196
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013071200
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > 订单退款 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071001
+  - 产品文档 > 支付产品 > 订单退款 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071031
+  - 产品文档 > 支付产品 > 订单退款 > 业务示例代码：https://pay.weixin.qq.com/doc/v3/merchant/4015217336
+  - 产品文档 > 支付产品 > 订单退款 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4013071033
+  - 产品文档 > 支付产品 > 订单退款 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013071200
+  - 产品文档 > 支付产品 > 订单退款 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4014959630
+  - 产品文档 > 支付产品 > 订单退款 > API列表 > 申请退款：https://pay.weixin.qq.com/doc/v3/merchant/4013071036
+  - 产品文档 > 支付产品 > 订单退款 > API列表 > 查询单笔退款（通过商户退款单号）：https://pay.weixin.qq.com/doc/v3/merchant/4013071041
+  - 产品文档 > 支付产品 > 订单退款 > API列表 > 发起异常退款：https://pay.weixin.qq.com/doc/v3/merchant/4013071193
+  - 产品文档 > 支付产品 > 订单退款 > API列表 > 退款结果通知：https://pay.weixin.qq.com/doc/v3/merchant/4013071196
+- 页面内关键官方链接：
+  - 订单退款-产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071001
+  - 退款结果通知：https://pay.weixin.qq.com/doc/v3/merchant/4013071196
+  - 查询退款：https://pay.weixin.qq.com/doc/v3/merchant/4013071041
+  - 点击查看：https://pay.weixin.qq.com/doc/v3/merchant/4012075113
+  - 签名认证：https://pay.weixin.qq.com/doc/v3/merchant/4012365342#1.1-%E8%AF%B7%E6%B1%82%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3
+  - 查询订单：https://pay.weixin.qq.com/doc/v3/merchant/4013070356
+  - 支付成功回调通知：https://pay.weixin.qq.com/doc/v3/merchant/4013070368
+  - 退款通知UI示意图：https://pay.weixin.qq.com/doc/v3/merchant/4013071001
+  - Java：https://pay.weixin.qq.com/doc/v3/merchant/4014931831
+  - Go：https://pay.weixin.qq.com/doc/v3/merchant/4015119334
+  - 发起异常退款：https://pay.weixin.qq.com/doc/v3/merchant/4013071193
+  - 状态流转图：https://pay.weixin.qq.com/doc/v3/merchant/4013071031#3%E3%80%81%E9%80%80%E6%AC%BE%E5%8D%95%E7%8A%B6%E6%80%81%E6%B5%81%E8%BD%AC%E5%9B%BE
+  - 接口规则：https://pay.weixin.qq.com/doc/v3/merchant/4012081709
+  - 签名常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012365347
+  - 如何生成签名：https://pay.weixin.qq.com/doc/v3/merchant/4012365342#2.-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E9%AA%8C%E7%AD%BE%EF%BC%9F%E5%A6%82%E4%BD%95%E9%AA%8C%E7%AD%BE%EF%BC%9F
+  - 普通商户模式开发必要参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4013070756
+
+## 产品介绍
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4013071215
+- 官方更新时间：2025.04.24
+- 页面大纲：
+  - 1、产品概述
+  - 2、账单类型
+  - 交易账单与资金账单介绍
+  - 3、账单下载方式
+  - 4、账单的周期
+  - 5、账单的日切时间
+  - 6、账单数据时间
+  - 7、账单的数据快照
+- 侧边栏子文档：
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071215
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071218
+  - 业务示例代码：https://pay.weixin.qq.com/doc/v3/merchant/4015945131
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013071254
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791852
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/merchant/4013069884
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791830
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791873
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012791893
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012077201
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品文档 > 支付产品 > 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4016780043
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4013070992
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071204
+  - 产品文档 > 支付产品 > 下载账单 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071215
+  - 产品文档 > 支付产品 > 下载账单 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071218
+  - 产品文档 > 支付产品 > 下载账单 > 业务示例代码：https://pay.weixin.qq.com/doc/v3/merchant/4015945131
+  - 产品文档 > 支付产品 > 下载账单 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4013071223
+  - 产品文档 > 支付产品 > 下载账单 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4013071242
+  - 产品文档 > 支付产品 > 下载账单 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013071254
+- 页面内关键官方链接：
+  - 交易账单详情说明：https://pay.weixin.qq.com/doc/v3/merchant/4013071246
+  - 资金流水查询：https://pay.weixin.qq.com/doc/v3/merchant/4013071252#%E7%B1%BB%E5%9E%8B%E4%B8%89%EF%BC%9A%E5%95%86%E6%88%B7%E5%B9%B3%E5%8F%B0%E8%B5%84%E9%87%91%E6%B5%81%E6%B0%B4%E6%9F%A5%E8%AF%A2
+  - 资金账单详情说明：https://pay.weixin.qq.com/doc/v3/merchant/4013071249
+  - 商户平台下载账单操作指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071252
+  - 下载账单：https://pay.weixin.qq.com/doc/v3/merchant/4013071238
+
+## 下载账单操作指引
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4013071252
+- 官方更新时间：2024.11.25
+- 页面大纲：
+  - 1、商户平台下载账单概览
+  - 2、操作步骤说明
+  - 类型一：下载交易账单
+  - 类型二：下载资金账单
+  - 类型三：查询实时资金流水
+- 侧边栏子文档：
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071215
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071218
+  - 业务示例代码：https://pay.weixin.qq.com/doc/v3/merchant/4015945131
+  - 交易账单详细说明：https://pay.weixin.qq.com/doc/v3/merchant/4013071246
+  - 资金账单详细说明：https://pay.weixin.qq.com/doc/v3/merchant/4013071249
+  - 下载账单操作指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071252
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013071254
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+- 目录树相关页：
+  - 产品文档 > 支付产品 > 下载账单 > 产品介绍：https://pay.weixin.qq.com/doc/v3/merchant/4013071215
+  - 产品文档 > 支付产品 > 下载账单 > 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071218
+  - 产品文档 > 支付产品 > 下载账单 > 业务示例代码：https://pay.weixin.qq.com/doc/v3/merchant/4015945131
+  - 产品文档 > 支付产品 > 下载账单 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4013071223
+  - 产品文档 > 支付产品 > 下载账单 > 附录：https://pay.weixin.qq.com/doc/v3/merchant/4013071242
+  - 产品文档 > 支付产品 > 下载账单 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013071254
+  - 产品文档 > 支付产品 > 下载账单 > 附录 > 交易账单详细说明：https://pay.weixin.qq.com/doc/v3/merchant/4013071246
+  - 产品文档 > 支付产品 > 下载账单 > 附录 > 资金账单详细说明：https://pay.weixin.qq.com/doc/v3/merchant/4013071249
+  - 产品文档 > 支付产品 > 下载账单 > 附录 > 下载账单操作指引：https://pay.weixin.qq.com/doc/v3/merchant/4013071252
+- 页面内关键官方链接：
+  - 商户平台员工权限管理：https://pay.weixin.qq.com/doc/v3/merchant/4013071427
+
+## 开发必要参数说明
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4013070756
+- 官方更新时间：2025.10.28
+- 侧边栏子文档：
+  - APIv3概述：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 开发必要参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4013070756
+  - mchid与appid申请：https://pay.weixin.qq.com/doc/v3/merchant/4012071573
+  - 管理商户号绑定的APPID账号：https://pay.weixin.qq.com/doc/v3/merchant/4016328613
+  - 管理经营场景：https://pay.weixin.qq.com/doc/v3/merchant/4017312501
+  - 配置APIv3密钥：https://pay.weixin.qq.com/doc/v3/merchant/4012072195
+  - 配置技术负责人账号指引：https://pay.weixin.qq.com/doc/v3/merchant/4015423618
+  - 员工权限管理：https://pay.weixin.qq.com/doc/v3/merchant/4013071427
+  - 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+  - 跨城冗灾升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075113
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075249
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075393
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+  - 国家商用密码简介：https://pay.weixin.qq.com/doc/v3/merchant/4012075987
+  - 获取国家商用密码证书和密钥：https://pay.weixin.qq.com/doc/v3/merchant/4012076002
+  - APIv3接口使用国家商用密码指引：https://pay.weixin.qq.com/doc/v3/merchant/4012076194
+  - 开户银行全称对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076270
+  - 开户银行对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076294
+  - 银行类型对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076355
+  - 省市区编号对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076371
+  - 优惠费率活动对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076387
+  - 跨境电商二级商户费率对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076403
+  - 商户行业编码：https://pay.weixin.qq.com/doc/v3/merchant/4012076423
+  - 特殊行业ID对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076444
+  - 接入模式：https://pay.weixin.qq.com/doc/v3/merchant/4012068443
+  - 支付产品：https://pay.weixin.qq.com/doc/v3/merchant/4012068590
+  - 业务平台：https://pay.weixin.qq.com/doc/v3/merchant/4012068615
+  - 业务系统：https://pay.weixin.qq.com/doc/v3/merchant/4012068672
+  - 参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068676
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4016179629
+  - 交易投诉运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012587539
+- 目录树相关页：
+  - 通用规则 > 开发须知 > APIv3概述：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 通用规则 > 开发须知 > 接口规则说明：https://pay.weixin.qq.com/doc/v3/merchant/4012081706
+  - 通用规则 > 开发须知 > 开发参数申请和配置：https://pay.weixin.qq.com/doc/v3/merchant/4012067284
+  - 通用规则 > 开发须知 > 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+  - 通用规则 > 开发须知 > 如何签名：https://pay.weixin.qq.com/doc/v3/merchant/4013051105
+  - 通用规则 > 开发须知 > 如何验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053004
+  - 通用规则 > 开发须知 > 如何加解密敏感字段：https://pay.weixin.qq.com/doc/v3/merchant/4013053016
+  - 通用规则 > 开发须知：https://pay.weixin.qq.com/doc/v3/merchant/4013053022
+  - 通用规则 > 开发须知 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013053045
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 开发必要参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4013070756
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > mchid与appid申请：https://pay.weixin.qq.com/doc/v3/merchant/4012071573
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 管理商户号绑定的APPID账号：https://pay.weixin.qq.com/doc/v3/merchant/4016328613
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 管理经营场景：https://pay.weixin.qq.com/doc/v3/merchant/4017312501
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 商户API证书管理：https://pay.weixin.qq.com/doc/v3/merchant/4016327338
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 配置APIv3密钥：https://pay.weixin.qq.com/doc/v3/merchant/4012072195
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 配置技术负责人账号指引：https://pay.weixin.qq.com/doc/v3/merchant/4015423618
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 员工权限管理：https://pay.weixin.qq.com/doc/v3/merchant/4013071427
+- 页面内关键官方链接：
+  - 技术负责人：https://pay.weixin.qq.com/doc/v3/merchant/4015423618
+  - mchid与appid申请：https://pay.weixin.qq.com/doc/v3/merchant/4012071573
+  - 绑定：https://pay.weixin.qq.com/doc/v3/merchant/4013287010
+  - 查看商户号已绑定的appid：https://pay.weixin.qq.com/doc/v3/merchant/4016328613#1%E3%80%81%E6%9F%A5%E8%AF%A2%E5%95%86%E6%88%B7%E5%8F%B7%E7%BB%91%E5%AE%9A%E7%9A%84APPID%E8%B4%A6%E5%8F%B7
+  - 商户号绑定appid指南：https://pay.weixin.qq.com/doc/v3/merchant/4016328613#2%E3%80%81%E5%95%86%E6%88%B7%E5%8F%B7%E7%BB%91%E5%AE%9A%E6%96%B0%E7%9A%84APPID%E8%B4%A6%E5%8F%B7%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97
+  - 对请求进行签名：https://pay.weixin.qq.com/doc/v3/merchant/4012365334
+  - 申请商户API证书流程：https://pay.weixin.qq.com/doc/v3/merchant/4012072428
+  - 查看商户API证书序列号指南：https://pay.weixin.qq.com/doc/v3/merchant/4012072428#Q%EF%BC%9A%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E5%95%86%E6%88%B7API%E8%AF%81%E4%B9%A6%E5%BA%8F%E5%88%97%E5%8F%B7%EF%BC%9F
+  - 验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053249
+  - 加密敏感信息：https://pay.weixin.qq.com/doc/v3/merchant/4013053257
+  - 微信支付公钥获取指南：https://pay.weixin.qq.com/doc/v3/merchant/4012153196
+  - 加密的敏感信息：https://pay.weixin.qq.com/doc/v3/merchant/4013053257
+  - 解密：https://pay.weixin.qq.com/doc/v3/merchant/4012071382
+  - 下载平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4012551764
+  - 设置APIv3密钥流程：https://pay.weixin.qq.com/doc/v3/merchant/4012072195
+  - 验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053420
+  - 敏感信息加密：https://pay.weixin.qq.com/doc/v3/merchant/4013053264
+  - 微信支付平台证书下载：https://pay.weixin.qq.com/doc/v3/merchant/4012551764
+  - 平台证书简介及使用说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068814#4.-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E5%B9%B3%E5%8F%B0%E8%AF%81%E4%B9%A6
+  - 参考指引切换为使用微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012154180
+  - 加密的敏感信息：https://pay.weixin.qq.com/doc/v3/merchant/4013053264
+  - 下载微信支付平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4012551764
+  - 如何查看商户API证书或平台证书序列号：https://pay.weixin.qq.com/doc/v3/merchant/4013053294
+
+## 微信支付公钥产品简介及使用说明
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012153196
+- 官方更新时间：2024.11.20
+- 页面大纲：
+  - 1. 什么是微信支付公钥？
+  - 2. 什么场景使用微信支付公钥？
+  - 2.1 验签场景
+  - 2.2 敏感字段加解密场景
+  - 3.如何获取微信支付公钥
+  - 4. 如何使用微信支付公钥
+  - 4.1 此前未对接过微信支付的商户，如何使用微信支付公钥？
+  - 4.2 此前已经使用平台证书对接过微信支付，如何从平台证书切换成微信支付公钥
+- 侧边栏子文档：
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+  - 微信支付公钥产品简介及使用说明：https://pay.weixin.qq.com/doc/v3/merchant/4012153196
+  - 如何从平台证书切换成微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012154180
+  - 如何从微信支付公钥切换成平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4015419357
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013038816
+- 目录树相关页：
+  - 产品文档 > 安全工具 > 微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012895091
+  - 产品文档 > 安全工具 > 平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4012068812
+  - 产品文档 > 安全工具 > 微信支付公钥 > 微信支付公钥产品简介及使用说明：https://pay.weixin.qq.com/doc/v3/merchant/4012153196
+  - 产品文档 > 安全工具 > 微信支付公钥 > 如何从平台证书切换成微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012154180
+  - 产品文档 > 安全工具 > 微信支付公钥 > 如何从微信支付公钥切换成平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4015419357
+  - 产品文档 > 安全工具 > 微信支付公钥 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013038816
+- 页面内关键官方链接：
+  - 如何使用微信支付公钥验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053249
+  - 如何使用微信支付公钥加密敏感信息：https://pay.weixin.qq.com/doc/v3/merchant/4013053257
+  - 如何从平台证书切换成微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012154180
+
+## 如何从平台证书切换成微信支付公钥
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012154180
+- 官方更新时间：2024.12.12
+- 页面大纲：
+  - 1. 背景
+  - 2. 什么情况下需要切换？
+  - 3. 切换过程哪些地方需要修改？
+  - 3.1 验签场景
+  - 3.2 敏感字段加解密场景
+  - 4. 微信支付SDK的商户如何将平台证书模式切换成公钥模式
+  - 4.1 获取微信支付公钥
+  - 4.2 Java SDK 商户如何将平台证书切换成微信支付公钥
+  - 4.3 PHP SDK 商户如何将平台证书切换成微信支付公钥
+  - 4.4 Go SDK 商户如何将平台证书切换成微信支付公钥
+  - 4.5 商户平台启动切换
+  - 4.6 确认切换完成
+  - 5. 没有使用微信支付SDK的商户如何将平台证书切换成微信支付公钥
+  - 5.1 获取微信支付公钥
+  - 5.2 切换验签和实现回调兼容
+  - 5.3 切换敏感字段加解密场景
+  - 5.4 商户平台点击更换验签方式
+  - 5.5 确认切换完成
+- 侧边栏子文档：
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+  - 微信支付公钥产品简介及使用说明：https://pay.weixin.qq.com/doc/v3/merchant/4012153196
+  - 如何从平台证书切换成微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012154180
+  - 如何从微信支付公钥切换成平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4015419357
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013038816
+- 目录树相关页：
+  - 产品文档 > 安全工具 > 微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012895091
+  - 产品文档 > 安全工具 > 平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4012068812
+  - 产品文档 > 安全工具 > 微信支付公钥 > 微信支付公钥产品简介及使用说明：https://pay.weixin.qq.com/doc/v3/merchant/4012153196
+  - 产品文档 > 安全工具 > 微信支付公钥 > 如何从平台证书切换成微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012154180
+  - 产品文档 > 安全工具 > 微信支付公钥 > 如何从微信支付公钥切换成平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4015419357
+  - 产品文档 > 安全工具 > 微信支付公钥 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013038816
+- 页面内关键官方链接：
+  - Java SDK：https://github.com/wechatpay-apiv3/wechatpay-java
+  - 微信支付公钥验签：https://github.com/wechatpay-apiv3/wechatpay-java?tab=readme-ov-file#%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%B9%B3%E5%8F%B0%E5%85%AC%E9%92%A5
+  - 什么是商户API证书？如何获取商户API证书？：https://pay.weixin.qq.com/doc/v3/merchant/4013053053
+  - 获取微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012154180#4.1-%E8%8E%B7%E5%8F%96%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%85%AC%E9%92%A5
+  - 参考查看商户API证书私钥：https://pay.weixin.qq.com/doc/v3/merchant/4013053053#%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E5%95%86%E6%88%B7API%E8%AF%81%E4%B9%A6%E5%BA%8F%E5%88%97%E5%8F%B7%EF%BC%9F
+  - 什么是APIv3密钥？如何获取APIv3密钥：https://pay.weixin.qq.com/doc/v3/merchant/4013053267
+  - 如何更换商户API证书：https://pay.weixin.qq.com/doc/v3/merchant/4013053057
+  - 回调兼容说明：https://github.com/wechatpay-apiv3/wechatpay-java/blob/main/core/src/main/java/com/wechat/pay/java/core/notification/RSACombinedNotificationConfig.java
+  - 手动加解密章节：https://github.com/wechatpay-apiv3/wechatpay-java?tab=readme-ov-file#%E6%89%8B%E5%8A%A8%E5%8A%A0%E8%A7%A3%E5%AF%86
+  - PHP SDK：https://github.com/wechatpay-apiv3/wechatpay-php
+  - Go SDK：https://github.com/wechatpay-apiv3/wechatpay-go
+  - 平台证书验签：https://github.com/wechatpay-apiv3/wechatpay-go?tab=readme-ov-file#%E5%9B%9E%E8%B0%83%E9%80%9A%E7%9F%A5%E7%9A%84%E9%AA%8C%E7%AD%BE%E4%B8%8E%E8%A7%A3%E5%AF%86
+  - 微信支付公钥验签名：https://github.com/wechatpay-apiv3/wechatpay-go?tab=readme-ov-file
+  - 什么是商户API证书？如何获取商户API证书？：https://pay.weixin.qq.com/doc/v3/merchant/4013053053#%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E5%95%86%E6%88%B7API%E8%AF%81%E4%B9%A6%E5%BA%8F%E5%88%97%E5%8F%B7%EF%BC%9F
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/partner/4013038589
+  - 如何获取公钥ID：https://pay.weixin.qq.com/doc/v3/merchant/4012154180#4.1-%E8%8E%B7%E5%8F%96%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%85%AC%E9%92%A5
+  - 如何使用微信支付公钥验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053249
+  - 微信支付公钥加密敏感信息字段：https://pay.weixin.qq.com/doc/v3/merchant/4013053257
+
+## 如何使用微信支付公钥验签
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4013053249
+- 官方更新时间：2024.11.20
+- 页面大纲：
+  - 1. 获取微信支付公钥
+  - 2. 构造验签串
+  - 3. 获取应答签名
+  - 4. 验证签名
+  - 5. 注意事项
+  - （1）请合理应对签名探测流量
+  - （2）文件/图片下载接口验签说明
+- 侧边栏子文档：
+  - APIv3概述：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+  - 如何使用微信支付公钥验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053249
+  - 跨城冗灾升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075113
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075249
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075393
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+  - 国家商用密码简介：https://pay.weixin.qq.com/doc/v3/merchant/4012075987
+  - 获取国家商用密码证书和密钥：https://pay.weixin.qq.com/doc/v3/merchant/4012076002
+  - APIv3接口使用国家商用密码指引：https://pay.weixin.qq.com/doc/v3/merchant/4012076194
+  - 开户银行全称对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076270
+  - 开户银行对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076294
+  - 银行类型对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076355
+  - 省市区编号对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076371
+  - 优惠费率活动对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076387
+  - 跨境电商二级商户费率对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076403
+  - 商户行业编码：https://pay.weixin.qq.com/doc/v3/merchant/4012076423
+  - 特殊行业ID对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076444
+  - 接入模式：https://pay.weixin.qq.com/doc/v3/merchant/4012068443
+  - 支付产品：https://pay.weixin.qq.com/doc/v3/merchant/4012068590
+  - 业务平台：https://pay.weixin.qq.com/doc/v3/merchant/4012068615
+  - 业务系统：https://pay.weixin.qq.com/doc/v3/merchant/4012068672
+  - 参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068676
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4016179629
+  - 交易投诉运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012587539
+- 目录树相关页：
+  - 通用规则 > 开发须知 > APIv3概述：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 通用规则 > 开发须知 > 接口规则说明：https://pay.weixin.qq.com/doc/v3/merchant/4012081706
+  - 通用规则 > 开发须知 > 开发参数申请和配置：https://pay.weixin.qq.com/doc/v3/merchant/4012067284
+  - 通用规则 > 开发须知 > 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+  - 通用规则 > 开发须知 > 如何签名：https://pay.weixin.qq.com/doc/v3/merchant/4013051105
+  - 通用规则 > 开发须知 > 如何验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053004
+  - 通用规则 > 开发须知 > 如何加解密敏感字段：https://pay.weixin.qq.com/doc/v3/merchant/4013053016
+  - 通用规则 > 开发须知：https://pay.weixin.qq.com/doc/v3/merchant/4013053022
+  - 通用规则 > 开发须知 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4013053045
+  - 通用规则 > 开发须知 > 如何验签 > 如何使用微信支付公钥验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053249
+  - 通用规则 > 开发须知 > 如何验签 > 如何使用平台证书验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053252
+
+## 如何使用平台证书验签名
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4013053420
+- 官方更新时间：2024.11.29
+- 页面大纲：
+  - 概述
+  - 1、获取平台证书
+  - 1.1 首次下载证书
+  - 1.2 二次获取平台证书
+  - 2. 构造验签名串
+  - 2.1 构造验签串前的检查
+  - 2.2开始构造验签串
+  - 3.获取应答签名
+  - 4.验证签名
+  - 5. 应对签名探测流量
+  - 6.文件/图片下载接口的验签说明
+- 侧边栏子文档：
+  - APIv3概述：https://pay.weixin.qq.com/doc/v3/merchant/4012081606
+  - 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/merchant/4012365342
+  - 如何使用微信支付公钥验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053249
+  - 如何使用平台证书验签名：https://pay.weixin.qq.com/doc/v3/merchant/4013053420
+  - 如何使用签名/验签工具：https://pay.weixin.qq.com/doc/v3/merchant/4012365352
+  - 跨城冗灾升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075113
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075249
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v3/merchant/4012075393
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v3/merchant/4012075420
+  - 国家商用密码简介：https://pay.weixin.qq.com/doc/v3/merchant/4012075987
+  - 获取国家商用密码证书和密钥：https://pay.weixin.qq.com/doc/v3/merchant/4012076002
+  - APIv3接口使用国家商用密码指引：https://pay.weixin.qq.com/doc/v3/merchant/4012076194
+  - 开户银行全称对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076270
+  - 开户银行对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076294
+  - 银行类型对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076355
+  - 省市区编号对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076371
+  - 优惠费率活动对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076387
+  - 跨境电商二级商户费率对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076403
+  - 商户行业编码：https://pay.weixin.qq.com/doc/v3/merchant/4012076423
+  - 特殊行业ID对照表：https://pay.weixin.qq.com/doc/v3/merchant/4012076444
+  - 接入模式：https://pay.weixin.qq.com/doc/v3/merchant/4012068443
+  - 支付产品：https://pay.weixin.qq.com/doc/v3/merchant/4012068590
+  - 业务平台：https://pay.weixin.qq.com/doc/v3/merchant/4012068615
+  - 业务系统：https://pay.weixin.qq.com/doc/v3/merchant/4012068672
+  - 参数说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068676
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4016179629
+  - 交易投诉运营规范：https://pay.weixin.qq.com/doc/v3/merchant/4012587539
+- 目录树相关页：
+  - 通用规则 > 开发须知 > 如何验签 > 如何使用微信支付公钥验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053249
+  - 通用规则 > 开发须知 > 如何验签 > 如何使用平台证书验签：https://pay.weixin.qq.com/doc/v3/merchant/4013053252
+  - 通用规则 > 开发须知 > 如何验签 > 如何使用平台证书验签 > 如何使用平台证书验签名：https://pay.weixin.qq.com/doc/v3/merchant/4013053420
+  - 通用规则 > 开发须知 > 如何验签 > 如何使用平台证书验签 > 如何使用签名/验签工具：https://pay.weixin.qq.com/doc/v3/merchant/4012365352
+- 页面内关键官方链接：
+  - 操作指引-如何生成请求签名：https://pay.weixin.qq.com/doc/v3/merchant/4012365334
+  - 如何通过证书信任链验证平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4012069411#%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E8%AF%81%E4%B9%A6%E4%BF%A1%E4%BB%BB%E9%93%BE%E9%AA%8C%E8%AF%81%E5%B9%B3%E5%8F%B0%E8%AF%81%E4%B9%A6%EF%BC%9F
+
+## 下载平台证书
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012551764
+- 官方更新时间：2024.09.13
+- 页面大纲：
+  - 接口说明
+  - 请求参数
+  - 应答参数 折叠全部参数
+- 侧边栏子文档：
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+  - 平台证书简介及使用说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068814
+  - 平台证书更换操作指引：https://pay.weixin.qq.com/doc/v3/merchant/4012068829
+  - 下载平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4012551764
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012069411
+- 目录树相关页：
+  - 产品文档 > 安全工具 > 平台证书 > 平台证书简介及使用说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068814
+  - 产品文档 > 安全工具 > 平台证书 > 平台证书更换操作指引：https://pay.weixin.qq.com/doc/v3/merchant/4012068829
+  - 产品文档 > 安全工具 > 平台证书 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4012068852
+  - 产品文档 > 安全工具 > 平台证书 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012069411
+  - 产品文档 > 安全工具 > 平台证书 > API列表 > 下载平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4012551764
+- 页面内关键官方链接：
+  - 证书下载工具：https://github.com/wechatpay-apiv3/CertificateDownloader
+  - 证书和回调报文解密：https://pay.weixin.qq.com/doc/v3/merchant/4012071382
+  - 点击查看：https://pay.weixin.qq.com/doc/v3/merchant/4012075113
+  - 签名认证：https://pay.weixin.qq.com/doc/v3/merchant/4012365342#%E8%AF%B7%E6%B1%82%E6%8E%A5%E5%8F%A3%E5%90%8E%E7%AB%AF%E7%AD%BE%E5%90%8D
+
+## 平台证书更换操作指引
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012068829
+- 官方更新时间：2024.12.04
+- 页面大纲：
+  - 准备开始
+  - 已支持多证书验签的商户
+  - 步骤一：登录商户平台，进入平台证书管理
+  - 步骤二：启动灰度
+  - 步骤三：选择灰度方式
+  - 步骤四：验证使用新证书验签成功
+  - 终止灰度
+  - 仅支持部署一份平台证书的商户
+  - 如何修改新平台证书返回时间
+- 侧边栏子文档：
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+  - 平台证书简介及使用说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068814
+  - 平台证书更换操作指引：https://pay.weixin.qq.com/doc/v3/merchant/4012068829
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012069411
+- 目录树相关页：
+  - 产品文档 > 安全工具 > 微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012895091
+  - 产品文档 > 安全工具 > 平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4012068812
+  - 产品文档 > 安全工具 > 平台证书 > 平台证书简介及使用说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068814
+  - 产品文档 > 安全工具 > 平台证书 > 平台证书更换操作指引：https://pay.weixin.qq.com/doc/v3/merchant/4012068829
+  - 产品文档 > 安全工具 > 平台证书 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4012068852
+  - 产品文档 > 安全工具 > 平台证书 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012069411
+- 页面内关键官方链接：
+  - 平台证书简介及使用说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068814
+  - 如何设置安全联系人：https://pay.weixin.qq.com/doc/v3/merchant/4012076563
+
+## 平台证书简介及使用说明
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012068814
+- 官方更新时间：2024.11.29
+- 页面大纲：
+  - 1. 请使用微信支付公钥方式
+  - 2. 什么是平台证书？
+  - 3. 什么场景使用平台证书？
+  - 3.1 验签场景
+  - 3.2 敏感字段加解密场景
+  - 4. 如何获取平台证书
+  - 4.1 首次获取平台证书
+  - 4.2 后续获取平台证书
+  - 5. 如何更新平台证书
+- 侧边栏子文档：
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647301
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/merchant/4012647399
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647471
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/merchant/4012647500
+  - 平台证书简介及使用说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068814
+  - 平台证书更换操作指引：https://pay.weixin.qq.com/doc/v3/merchant/4012068829
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012069411
+- 目录树相关页：
+  - 产品文档 > 安全工具 > 微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012895091
+  - 产品文档 > 安全工具 > 平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4012068812
+  - 产品文档 > 安全工具 > 平台证书 > 平台证书简介及使用说明：https://pay.weixin.qq.com/doc/v3/merchant/4012068814
+  - 产品文档 > 安全工具 > 平台证书 > 平台证书更换操作指引：https://pay.weixin.qq.com/doc/v3/merchant/4012068829
+  - 产品文档 > 安全工具 > 平台证书 > API列表：https://pay.weixin.qq.com/doc/v3/merchant/4012068852
+  - 产品文档 > 安全工具 > 平台证书 > 常见问题：https://pay.weixin.qq.com/doc/v3/merchant/4012069411
+- 页面内关键官方链接：
+  - 微信支付公钥指引：https://pay.weixin.qq.com/doc/v3/merchant/4012153196
+  - 平台证书切换成为微信支付公钥指引：https://pay.weixin.qq.com/doc/v3/merchant/4012154180
+  - 如何从平台证书切换成微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012154180
+  - 什么是APIV3密钥，如何获取APIv3密钥：https://pay.weixin.qq.com/doc/v3/merchant/4013053267
+  - 什么是商户API证书，如何获取商户API证书：https://pay.weixin.qq.com/doc/v3/merchant/4013053053
+  - 如何通过证书信任链验证平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4012069411#%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E8%AF%81%E4%B9%A6%E4%BF%A1%E4%BB%BB%E9%93%BE%E9%AA%8C%E8%AF%81%E5%B9%B3%E5%8F%B0%E8%AF%81%E4%B9%A6%EF%BC%9F
+  - 平台证书更换操作指引：https://pay.weixin.qq.com/doc/v3/merchant/4012068829
+  - 如何将平台证书切换到微信支付公钥：https://pay.weixin.qq.com/doc/v3/merchant/4012154180
+
+## 总览
+
+- URL：https://pay.weixin.qq.com/doc/v3/merchant/4012078749
+- 官方更新时间：2026.04.01
+- 页面大纲：
+  - 2026-04
+  - 2026-03
+  - 2026-01
+  - 2025-12
+  - 2025-08
+  - 2025-05
+  - 2025-03
+  - 2025-02
+  - 2025-01
+  - 2024-09
+  - 2024-08
+  - 2024-07
+  - 2024-06
+  - 2023-08
+  - 2023-03
+- 侧边栏子文档：
+  - 总览：https://pay.weixin.qq.com/doc/v3/merchant/4012078749
+  - JSAPI支付：https://pay.weixin.qq.com/doc/v3/merchant/4012079396
+  - App支付：https://pay.weixin.qq.com/doc/v3/merchant/4012079627
+  - H5支付：https://pay.weixin.qq.com/doc/v3/merchant/4012079635
+  - Native支付：https://pay.weixin.qq.com/doc/v3/merchant/4012079640
+  - 小程序支付：https://pay.weixin.qq.com/doc/v3/merchant/4012079645
+  - 合单支付：https://pay.weixin.qq.com/doc/v3/merchant/4012079651
+  - 订单退款：https://pay.weixin.qq.com/doc/v3/merchant/4012079683
+  - 医保支付：https://pay.weixin.qq.com/doc/v3/merchant/4018986036
+  - 微信支付分：https://pay.weixin.qq.com/doc/v3/merchant/4012079700
+  - 微信支付分停车：https://pay.weixin.qq.com/doc/v3/merchant/4012079704
+  - 代金券：https://pay.weixin.qq.com/doc/v3/merchant/4012079711
+  - 商家券：https://pay.weixin.qq.com/doc/v3/merchant/4012079746
+  - 支付有礼：https://pay.weixin.qq.com/doc/v3/merchant/4012079748
+  - 小程序发券插件：https://pay.weixin.qq.com/doc/v3/merchant/4012079753
+  - H5发券：https://pay.weixin.qq.com/doc/v3/merchant/4012079758
+  - 智慧商圈：https://pay.weixin.qq.com/doc/v3/merchant/4012079771
+  - 商家转账：https://pay.weixin.qq.com/doc/v3/merchant/4013757784
+  - 分账：https://pay.weixin.qq.com/doc/v3/merchant/4012079809
+  - 消费者投诉2.0：https://pay.weixin.qq.com/doc/v3/merchant/4012079830
+  - 平台证书：https://pay.weixin.qq.com/doc/v3/merchant/4012080145
+- 目录树相关页：
+  - 更新日志 > 总览：https://pay.weixin.qq.com/doc/v3/merchant/4012078749
+  - 更新日志 > 支付产品：https://pay.weixin.qq.com/doc/v3/merchant/4012078753
+  - 更新日志 > 运营工具：https://pay.weixin.qq.com/doc/v3/merchant/4012078757
+  - 更新日志 > 扩展工具：https://pay.weixin.qq.com/doc/v3/merchant/4012078758
+  - 更新日志 > 安全工具：https://pay.weixin.qq.com/doc/v3/merchant/4012078761
+- 页面内关键官方链接：
+  - 创建支付分订单：https://pay.weixin.qq.com/doc/v3/merchant/4012587900
+  - 完结支付分订单：https://pay.weixin.qq.com/doc/v3/merchant/4012587955
+  - 修改订单金额：https://pay.weixin.qq.com/doc/v3/merchant/4012587957
+  - 微信支付分权限类问题排查指南：https://pay.weixin.qq.com/doc/v3/merchant/4018398339
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012068499
+  - App合单下单：https://pay.weixin.qq.com/doc/v3/merchant/4012556944
+  - H5合单下单：https://pay.weixin.qq.com/doc/v3/merchant/4012556961
+  - JSAPI合单下单：https://pay.weixin.qq.com/doc/v3/merchant/4012556926
+  - Native合单下单：https://pay.weixin.qq.com/doc/v3/merchant/4012556982
+  - 小程序合单下单：https://pay.weixin.qq.com/doc/v3/merchant/4012556931
+  - 权限申请：https://pay.weixin.qq.com/doc/v3/merchant/4016824675
+  - 查询合单订单：https://pay.weixin.qq.com/doc/v3/merchant/4012557006
+  - 关闭合单订单：https://pay.weixin.qq.com/doc/v3/merchant/4012577452
+  - 合单订单支付成功回调通知：https://pay.weixin.qq.com/doc/v3/merchant/4012158598
+  - 申请退款：https://pay.weixin.qq.com/doc/v3/merchant/4013071036
+  - 查询单笔退款（通过商户退款单号）：https://pay.weixin.qq.com/doc/v3/merchant/4013071041
+  - 发起异常退款：https://pay.weixin.qq.com/doc/v3/merchant/4013071193
+  - 退款结果通知：https://pay.weixin.qq.com/doc/v3/merchant/4013071196
+  - 订单失败原因说明：https://pay.weixin.qq.com/doc/v3/merchant/4013774966
+  - 微信支付退款最佳实践：https://pay.weixin.qq.com/doc/v3/merchant/4014959631
+  - 查询代金券详情：https://pay.weixin.qq.com/doc/v3/merchant/4012486942
+  - 根据商户号查用户的券：https://pay.weixin.qq.com/doc/v3/merchant/4012534690
+  - 扣费受理：https://pay.weixin.qq.com/doc/v3/merchant/4012534352
+  - 发起转账：https://pay.weixin.qq.com/doc/v3/merchant/4012716434
+  - 撤销转账：https://pay.weixin.qq.com/doc/v3/merchant/4012716458
+  - 商户单号查询转账单：https://pay.weixin.qq.com/doc/v3/merchant/4012716437
+  - 微信单号查询转账单：https://pay.weixin.qq.com/doc/v3/merchant/4012716457
+  - 商户单号申请电子回单：https://pay.weixin.qq.com/doc/v3/merchant/4012716452
+  - 商户单号查询电子回单：https://pay.weixin.qq.com/doc/v3/merchant/4012716436
+  - 微信单号申请电子回单：https://pay.weixin.qq.com/doc/v3/merchant/4012716456
+  - 微信单号查询电子回单：https://pay.weixin.qq.com/doc/v3/merchant/4012716455
+  - 权限申请：https://pay.weixin.qq.com/doc/v3/merchant/4013740645
+  - 设置接口安全IP：https://pay.weixin.qq.com/doc/v3/merchant/4013751010
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/merchant/4012715211
+  - 商家转账：https://pay.weixin.qq.com/doc/v3/merchant/4012711988
+  - 回复用户：https://pay.weixin.qq.com/doc/v3/merchant/4012467254
+
+## 产品介绍
+
+- URL：https://pay.weixin.qq.com/doc/v3/partner/4012069852
+- 官方更新时间：2025.09.04
+- 页面大纲：
+  - 1、产品概述
+  - 2、JSAPI支付模式介绍
+  - 3、产品接入流程
+  - 4、结算规则
+  - 5、资金提现
+- 侧边栏子文档：
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/partner/4012069852
+  - 权限申请：https://pay.weixin.qq.com/doc/v3/partner/4012069853
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/partner/4012069859
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/partner/4013334850
+  - 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/partner/4012851192
+  - 刷脸支付：https://pay.weixin.qq.com/doc/v3/partner/4012851199
+  - 现金红包（V2）：https://pay.weixin.qq.com/doc/v3/partner/4012851209
+  - 清关报关（V2）：https://pay.weixin.qq.com/doc/v3/partner/4012851220
+  - 产品介绍：https://pay.weixin.qq.com/doc/v3/partner/4012086891
+  - 接入前准备：https://pay.weixin.qq.com/doc/v3/partner/4012086921
+  - 消费者投诉2.0：https://pay.weixin.qq.com/doc/v3/partner/4016312079
+- 目录树相关页：
+  - 产品文档 > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v3/partner/4012069851
+  - 产品文档 > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v3/partner/4013080226
+  - 产品文档 > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v3/partner/4012074914
+  - 产品文档 > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v3/partner/4012076266
+  - 产品文档 > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v3/partner/4012076729
+  - 产品文档 > 支付产品 > 付款码支付（V2）：https://pay.weixin.qq.com/doc/v3/partner/4012851192
+  - 产品文档 > 支付产品 > 合单支付：https://pay.weixin.qq.com/doc/v3/partner/4012079328
+  - 产品文档 > 支付产品 > 刷脸支付：https://pay.weixin.qq.com/doc/v3/partner/4012851199
+  - 产品文档 > 支付产品 > 医保支付（服务商模式）：https://pay.weixin.qq.com/doc/v3/partner/4012154266
+  - 产品文档 > 支付产品 > 医保支付（间连模式）：https://pay.weixin.qq.com/doc/v3/partner/4018300075
+  - 产品文档 > 支付产品 > 订单退款：https://pay.weixin.qq.com/doc/v3/partner/4013080621
+  - 产品文档 > 支付产品 > 下载账单：https://pay.weixin.qq.com/doc/v3/partner/4013080591
+  - 产品文档 > 支付产品 > JSAPI支付 > 产品介绍：https://pay.weixin.qq.com/doc/v3/partner/4012069852
+  - 产品文档 > 支付产品 > JSAPI支付 > 权限申请：https://pay.weixin.qq.com/doc/v3/partner/4012069853
+  - 产品文档 > 支付产品 > JSAPI支付 > 开发指引：https://pay.weixin.qq.com/doc/v3/partner/4012069859
+  - 产品文档 > 支付产品 > JSAPI支付 > API列表：https://pay.weixin.qq.com/doc/v3/partner/4012069854
+  - 产品文档 > 支付产品 > JSAPI支付 > 常见问题：https://pay.weixin.qq.com/doc/v3/partner/4013334850
+  - 产品文档 > 支付产品 > JSAPI支付 > 附录：https://pay.weixin.qq.com/doc/v3/partner/4013334463
+- 页面内关键官方链接：
+  - 点金计划：https://pay.weixin.qq.com/doc/v3/partner/4012072130
+  - 权限申请：https://pay.weixin.qq.com/doc/v3/partner/4012069853
+  - 开发指引：https://pay.weixin.qq.com/doc/v3/partner/4012069859
+
+## 开发必要参数说明
+
+- URL：https://pay.weixin.qq.com/doc/v3/partner/4013080340
+- 官方更新时间：2025.10.28
+- 侧边栏子文档：
+  - APIv3概述：https://pay.weixin.qq.com/doc/v3/partner/4012081673
+  - 开发必要参数说明：https://pay.weixin.qq.com/doc/v3/partner/4013080340
+  - mchid与appid申请：https://pay.weixin.qq.com/doc/v3/partner/4012081990
+  - 管理商户号绑定的APPID账号：https://pay.weixin.qq.com/doc/v3/partner/4016329059
+  - 配置APIv3密钥：https://pay.weixin.qq.com/doc/v3/partner/4012081991
+  - 品牌经营API开发必要参数说明：https://pay.weixin.qq.com/doc/v3/partner/4015981654
+  - 平台员工权限管理：https://pay.weixin.qq.com/doc/v3/partner/4013080349
+  - 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/partner/4012365870
+  - 跨城冗灾升级指引：https://pay.weixin.qq.com/doc/v3/partner/4012082567
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v3/partner/4012082568
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v3/partner/4012082569
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v3/partner/4012082570
+  - 国家商用密码简介：https://pay.weixin.qq.com/doc/v3/partner/4012082627
+  - 获取国家商用密码证书和密钥：https://pay.weixin.qq.com/doc/v3/partner/4012082628
+  - APIv3接口使用国家商用密码指引：https://pay.weixin.qq.com/doc/v3/partner/4012082629
+  - 开户银行全称对照表：https://pay.weixin.qq.com/doc/v3/partner/4012082812
+  - 开户银行对照表：https://pay.weixin.qq.com/doc/v3/partner/4012082813
+  - 银行类型对照表：https://pay.weixin.qq.com/doc/v3/partner/4012082814
+  - 省市区编号对照表：https://pay.weixin.qq.com/doc/v3/partner/4012082815
+  - 优惠费率活动对照表：https://pay.weixin.qq.com/doc/v3/partner/4012082816
+  - 跨境电商二级商户费率对照表：https://pay.weixin.qq.com/doc/v3/partner/4012082817
+  - 商户行业编码：https://pay.weixin.qq.com/doc/v3/partner/4012082818
+  - 特殊行业ID对照表：https://pay.weixin.qq.com/doc/v3/partner/4012082819
+  - 接入模式：https://pay.weixin.qq.com/doc/v3/partner/4012081931
+  - 支付产品：https://pay.weixin.qq.com/doc/v3/partner/4012081932
+  - 业务平台：https://pay.weixin.qq.com/doc/v3/partner/4012081933
+  - 业务系统：https://pay.weixin.qq.com/doc/v3/partner/4012081934
+  - 参数说明：https://pay.weixin.qq.com/doc/v3/partner/4012081935
+  - 常见问题：https://pay.weixin.qq.com/doc/v3/partner/4016183684
+- 目录树相关页：
+  - 通用规则 > 开发须知 > APIv3概述：https://pay.weixin.qq.com/doc/v3/partner/4012081673
+  - 通用规则 > 开发须知 > 接口规则说明：https://pay.weixin.qq.com/doc/v3/partner/4012081725
+  - 通用规则 > 开发须知 > 开发参数申请和配置：https://pay.weixin.qq.com/doc/v3/partner/4012081989
+  - 通用规则 > 开发须知 > 总述-APIv3如何签名和验签：https://pay.weixin.qq.com/doc/v3/partner/4012365870
+  - 通用规则 > 开发须知 > 如何签名：https://pay.weixin.qq.com/doc/v3/partner/4013058913
+  - 通用规则 > 开发须知 > 如何验签：https://pay.weixin.qq.com/doc/v3/partner/4013059007
+  - 通用规则 > 开发须知 > 如何加解密敏感字段：https://pay.weixin.qq.com/doc/v3/partner/4013059037
+  - 通用规则 > 开发须知：https://pay.weixin.qq.com/doc/v3/partner/4013059092
+  - 通用规则 > 开发须知 > 常见问题：https://pay.weixin.qq.com/doc/v3/partner/4013059118
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 开发必要参数说明：https://pay.weixin.qq.com/doc/v3/partner/4013080340
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > mchid与appid申请：https://pay.weixin.qq.com/doc/v3/partner/4012081990
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 管理商户号绑定的APPID账号：https://pay.weixin.qq.com/doc/v3/partner/4016329059
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 商户API证书管理：https://pay.weixin.qq.com/doc/v3/partner/4016329172
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 配置APIv3密钥：https://pay.weixin.qq.com/doc/v3/partner/4012081991
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 品牌经营API开发必要参数说明：https://pay.weixin.qq.com/doc/v3/partner/4015981654
+  - 通用规则 > 开发须知 > 开发参数申请和配置 > 平台员工权限管理：https://pay.weixin.qq.com/doc/v3/partner/4013080349
+- 页面内关键官方链接：
+  - mchid与appid申请：https://pay.weixin.qq.com/doc/v3/partner/4012081990
+  - 管理商户号绑定的APPID账号：https://pay.weixin.qq.com/doc/v3/partner/4016329059#2%E3%80%81%E5%95%86%E6%88%B7%E5%8F%B7%E7%BB%91%E5%AE%9A%E6%96%B0%E7%9A%84APPID%E8%B4%A6%E5%8F%B7%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97
+  - 接口进件：https://pay.weixin.qq.com/doc/v3/partner/4012062365
+  - 查询申请单状态API：https://pay.weixin.qq.com/doc/v3/partner/4012691376
+  - 服务商为子商户配置AppID（即sub_appid）：https://pay.weixin.qq.com/doc/v3/partner/4016329059#%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%95%86%E5%B9%B3%E5%8F%B0%E4%B8%BA%E5%AD%90%E5%95%86%E6%88%B7%E5%8F%91%E8%B5%B7APPID%E7%9A%84%E6%8E%88%E6%9D%83%E7%BB%91%E5%AE%9A%E7%94%B3%E8%AF%B7%EF%BC%88%E5%8D%B3sub_appid%EF%BC%89
+  - 对请求进行签名：https://pay.weixin.qq.com/doc/v3/partner/4012365862
+  - 申请商户API证书流程：https://pay.weixin.qq.com/doc/v3/partner/4012081992
+  - 查看商户API证书序列号指南：https://pay.weixin.qq.com/doc/v3/partner/4012081992#Q%EF%BC%9A%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E5%95%86%E6%88%B7API%E8%AF%81%E4%B9%A6%E5%BA%8F%E5%88%97%E5%8F%B7%EF%BC%9F
+  - 验签：https://pay.weixin.qq.com/doc/v3/partner/4013059017
+  - 加密敏感信息：https://pay.weixin.qq.com/doc/v3/partner/4013059044
+  - 微信支付公钥获取指南：https://pay.weixin.qq.com/doc/v3/partner/4012925323
+  - 加密的敏感信息：https://pay.weixin.qq.com/doc/v3/partner/4013059044
+  - 解密：https://pay.weixin.qq.com/doc/v3/partner/4012082320
+  - 下载平台证书：https://pay.weixin.qq.com/doc/v3/partner/4012715700
+  - 设置APIv3密钥流程：https://pay.weixin.qq.com/doc/v3/partner/4012081991#4%E3%80%81%E8%AE%BE%E7%BD%AEAPIv3%E5%AF%86%E9%92%A5
+  - 验签：https://pay.weixin.qq.com/doc/v3/partner/4013059030
+  - 敏感信息加密：https://pay.weixin.qq.com/doc/v3/partner/4013059053
+  - 微信支付平台证书下载：https://pay.weixin.qq.com/doc/v3/partner/4012715700
+  - 平台证书简介及使用说明：https://pay.weixin.qq.com/doc/v3/partner/4012073044#4.-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E5%B9%B3%E5%8F%B0%E8%AF%81%E4%B9%A6
+  - 参考指引切换为使用微信支付公钥：https://pay.weixin.qq.com/doc/v3/partner/4012925289
+  - 加密的敏感信息：https://pay.weixin.qq.com/doc/v3/partner/4013059053
+  - 下载微信支付平台证书：https://pay.weixin.qq.com/doc/v3/partner/4012715700
+  - 如何查看商户API证书或平台证书序列号：https://pay.weixin.qq.com/doc/v3/partner/4013059181
+
+## 场景介绍
+
+- URL：https://pay.weixin.qq.com/doc/v2/merchant/4011936234
+- 官方更新时间：2025.11.14
+- 页面大纲：
+  - 场景介绍
+- 侧边栏子文档：
+  - 支付账户：https://pay.weixin.qq.com/doc/v2/merchant/4011987975
+  - 场景介绍：https://pay.weixin.qq.com/doc/v2/merchant/4011936234
+  - 验证密码规则：https://pay.weixin.qq.com/doc/v2/merchant/4011936523
+  - 案例介绍：https://pay.weixin.qq.com/doc/v2/merchant/4011936527
+  - 协议规则：https://pay.weixin.qq.com/doc/v2/merchant/4011986581
+  - 开发指引：https://pay.weixin.qq.com/doc/v2/merchant/4011936672
+  - 常见问题：https://pay.weixin.qq.com/doc/v2/merchant/4016429686
+- 目录树相关页：
+  - 产品文档（V2） > 支付产品 > 付款码支付：https://pay.weixin.qq.com/doc/v2/merchant/4011935884
+  - 产品文档（V2） > 支付产品 > JSAPI支付：https://pay.weixin.qq.com/doc/v2/merchant/4011935205
+  - 产品文档（V2） > 支付产品 > Native支付：https://pay.weixin.qq.com/doc/v2/merchant/4011935899
+  - 产品文档（V2） > 支付产品 > APP支付：https://pay.weixin.qq.com/doc/v2/merchant/4011935900
+  - 产品文档（V2） > 支付产品 > H5支付：https://pay.weixin.qq.com/doc/v2/merchant/4011935901
+  - 产品文档（V2） > 支付产品 > 小程序支付：https://pay.weixin.qq.com/doc/v2/merchant/4011935904
+  - 产品文档（V2） > 支付产品 > 付款码支付 > 支付账户：https://pay.weixin.qq.com/doc/v2/merchant/4011987975
+  - 产品文档（V2） > 支付产品 > 付款码支付 > 场景介绍：https://pay.weixin.qq.com/doc/v2/merchant/4011936234
+  - 产品文档（V2） > 支付产品 > 付款码支付 > 验证密码规则：https://pay.weixin.qq.com/doc/v2/merchant/4011936523
+  - 产品文档（V2） > 支付产品 > 付款码支付 > 案例介绍：https://pay.weixin.qq.com/doc/v2/merchant/4011936527
+  - 产品文档（V2） > 支付产品 > 付款码支付 > 协议规则：https://pay.weixin.qq.com/doc/v2/merchant/4011986581
+  - 产品文档（V2） > 支付产品 > 付款码支付 > 开发指引：https://pay.weixin.qq.com/doc/v2/merchant/4011936672
+  - 产品文档（V2） > 支付产品 > 付款码支付 > API列表：https://pay.weixin.qq.com/doc/v2/merchant/4011937119
+  - 产品文档（V2） > 支付产品 > 付款码支付 > 常见问题：https://pay.weixin.qq.com/doc/v2/merchant/4016429686
+
+## 商户收银台H5大字号规范
+
+- URL：https://pay.weixin.qq.com/doc/v2/merchant/4011939746
+- 官方更新时间：2025.03.21
+- 页面大纲：
+  - 1. 范围
+  - 2. 大字体介绍
+  - 3. 未做适配的收银页面案例
+  - 3.1. 页面元素溢出
+  - 3.2. 信息重叠
+  - 3.3. 信息遮挡
+  - 4. 页面适配内容和实现指引
+  - 4.1. 哪些元素需要放大
+  - 4.2. 换行
+  - 4.3. 页面滚动
+  - 4.4. 间距
+  - 4.5. 拥挤情况
+  - 4.6. 限制页面元素不放大
+  - 5. 验收要求
+- 侧边栏子文档：
+  - 商户收银台H5大字号规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939746
+  - 微信支付二维码规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939778
+  - 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 支付模式：https://pay.weixin.qq.com/doc/v2/merchant/4011939826
+  - 名词解释：https://pay.weixin.qq.com/doc/v2/merchant/4011939975
+  - 参数规定：https://pay.weixin.qq.com/doc/v2/merchant/4011941162
+  - 最佳安全实践：https://pay.weixin.qq.com/doc/v2/merchant/4011941549
+  - 安全与网络相关注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984638
+  - HTTPS服务器配置：https://pay.weixin.qq.com/doc/v2/merchant/4012197402
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984682
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984721
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984794
+  - 支付验收指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984810
+  - 跨城冗灾方案：https://pay.weixin.qq.com/doc/v2/merchant/4011984887
+- 目录树相关页：
+  - 通用规则 > 接入规范：https://pay.weixin.qq.com/doc/v2/merchant/4011937022
+  - 通用规则 > 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 通用规则 > 名词表：https://pay.weixin.qq.com/doc/v2/merchant/4011937188
+  - 通用规则 > API安全：https://pay.weixin.qq.com/doc/v2/merchant/4011937214
+  - 通用规则 > 最佳实践：https://pay.weixin.qq.com/doc/v2/merchant/4011937221
+  - 通用规则 > 接入规范 > 商户收银台H5大字号规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939746
+  - 通用规则 > 接入规范 > 微信支付二维码规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939778
+
+## 最佳安全实践
+
+- URL：https://pay.weixin.qq.com/doc/v2/merchant/4011941549
+- 官方更新时间：2024.11.18
+- 页面大纲：
+  - 商户平台安全使用
+  - 1、申请入驻
+  - 2、收到开户邮件
+  - 3、登录商户平台
+  - 4、商户平台日常使用
+  - 系统开发注意事项
+  - 1、需求
+  - 2、设计
+  - 3、编码
+  - 4、测试
+  - 5、部署与运维
+- 侧边栏子文档：
+  - 商户收银台H5大字号规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939746
+  - 微信支付二维码规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939778
+  - 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 支付模式：https://pay.weixin.qq.com/doc/v2/merchant/4011939826
+  - 名词解释：https://pay.weixin.qq.com/doc/v2/merchant/4011939975
+  - 参数规定：https://pay.weixin.qq.com/doc/v2/merchant/4011941162
+  - 最佳安全实践：https://pay.weixin.qq.com/doc/v2/merchant/4011941549
+  - 安全与网络相关注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984638
+  - HTTPS服务器配置：https://pay.weixin.qq.com/doc/v2/merchant/4012197402
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984682
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984721
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984794
+  - 支付验收指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984810
+  - 跨城冗灾方案：https://pay.weixin.qq.com/doc/v2/merchant/4011984887
+- 目录树相关页：
+  - 通用规则 > 接入规范：https://pay.weixin.qq.com/doc/v2/merchant/4011937022
+  - 通用规则 > 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 通用规则 > 名词表：https://pay.weixin.qq.com/doc/v2/merchant/4011937188
+  - 通用规则 > API安全：https://pay.weixin.qq.com/doc/v2/merchant/4011937214
+  - 通用规则 > 最佳实践：https://pay.weixin.qq.com/doc/v2/merchant/4011937221
+  - 通用规则 > API安全 > 最佳安全实践：https://pay.weixin.qq.com/doc/v2/merchant/4011941549
+  - 通用规则 > API安全 > 安全与网络相关注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984638
+  - 通用规则 > API安全 > HTTPS服务器配置：https://pay.weixin.qq.com/doc/v2/merchant/4012197402
+- 页面内关键官方链接：
+  - 安全漏洞checklist：https://pay.weixin.qq.com/doc/v2/merchant/4012203399
+  - 系统漏洞检测及修复：https://pay.weixin.qq.com/doc/v2/merchant/4012203400
+  - Web漏洞检测及修复：https://pay.weixin.qq.com/doc/v2/merchant/4012203401
+  - 最新安全漏洞及修复：https://pay.weixin.qq.com/doc/v2/merchant/4012203402
+
+## 安全与网络相关注意事项
+
+- URL：https://pay.weixin.qq.com/doc/v2/merchant/4011984638
+- 官方更新时间：2024.11.18
+- 页面大纲：
+  - 1、服务器SSL版本说明
+  - 2、IPV6相关
+  - 3、无法连接微信服务器,访问api.mch.weixin.qq.com超时
+- 侧边栏子文档：
+  - 商户收银台H5大字号规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939746
+  - 微信支付二维码规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939778
+  - 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 支付模式：https://pay.weixin.qq.com/doc/v2/merchant/4011939826
+  - 名词解释：https://pay.weixin.qq.com/doc/v2/merchant/4011939975
+  - 参数规定：https://pay.weixin.qq.com/doc/v2/merchant/4011941162
+  - 最佳安全实践：https://pay.weixin.qq.com/doc/v2/merchant/4011941549
+  - 安全与网络相关注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984638
+  - HTTPS服务器配置：https://pay.weixin.qq.com/doc/v2/merchant/4012197402
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984682
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984721
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984794
+  - 支付验收指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984810
+  - 跨城冗灾方案：https://pay.weixin.qq.com/doc/v2/merchant/4011984887
+- 目录树相关页：
+  - 通用规则 > 接入规范：https://pay.weixin.qq.com/doc/v2/merchant/4011937022
+  - 通用规则 > 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 通用规则 > 名词表：https://pay.weixin.qq.com/doc/v2/merchant/4011937188
+  - 通用规则 > API安全：https://pay.weixin.qq.com/doc/v2/merchant/4011937214
+  - 通用规则 > 最佳实践：https://pay.weixin.qq.com/doc/v2/merchant/4011937221
+  - 通用规则 > API安全 > 最佳安全实践：https://pay.weixin.qq.com/doc/v2/merchant/4011941549
+  - 通用规则 > API安全 > 安全与网络相关注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984638
+  - 通用规则 > API安全 > HTTPS服务器配置：https://pay.weixin.qq.com/doc/v2/merchant/4012197402
+- 页面内关键官方链接：
+  - 网络超时的定位：https://pay.weixin.qq.com/doc/v2/merchant/4012203397
+
+## HTTPS服务器配置
+
+- URL：https://pay.weixin.qq.com/doc/v2/merchant/4012197402
+- 官方更新时间：2025.03.04
+- 页面大纲：
+  - 一、SSL证书申请
+  - 二、HTTPS服务器配置
+  - 三、相关事项
+- 侧边栏子文档：
+  - 商户收银台H5大字号规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939746
+  - 微信支付二维码规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939778
+  - 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 支付模式：https://pay.weixin.qq.com/doc/v2/merchant/4011939826
+  - 名词解释：https://pay.weixin.qq.com/doc/v2/merchant/4011939975
+  - 参数规定：https://pay.weixin.qq.com/doc/v2/merchant/4011941162
+  - 最佳安全实践：https://pay.weixin.qq.com/doc/v2/merchant/4011941549
+  - 安全与网络相关注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984638
+  - HTTPS服务器配置：https://pay.weixin.qq.com/doc/v2/merchant/4012197402
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984682
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984721
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984794
+  - 支付验收指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984810
+  - 跨城冗灾方案：https://pay.weixin.qq.com/doc/v2/merchant/4011984887
+- 目录树相关页：
+  - 通用规则 > 接入规范：https://pay.weixin.qq.com/doc/v2/merchant/4011937022
+  - 通用规则 > 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 通用规则 > 名词表：https://pay.weixin.qq.com/doc/v2/merchant/4011937188
+  - 通用规则 > API安全：https://pay.weixin.qq.com/doc/v2/merchant/4011937214
+  - 通用规则 > 最佳实践：https://pay.weixin.qq.com/doc/v2/merchant/4011937221
+  - 通用规则 > API安全 > 最佳安全实践：https://pay.weixin.qq.com/doc/v2/merchant/4011941549
+  - 通用规则 > API安全 > 安全与网络相关注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984638
+  - 通用规则 > API安全 > HTTPS服务器配置：https://pay.weixin.qq.com/doc/v2/merchant/4012197402
+
+## 支付回调和查单实现指引
+
+- URL：https://pay.weixin.qq.com/doc/v2/merchant/4011984682
+- 官方更新时间：2025.03.21
+- 页面大纲：
+  - 背景
+  - 目标
+  - 方案概述
+  - 前端支付返回处理
+  - 后端服务处理
+  - 常见问题
+- 侧边栏子文档：
+  - 商户收银台H5大字号规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939746
+  - 微信支付二维码规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939778
+  - 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 支付模式：https://pay.weixin.qq.com/doc/v2/merchant/4011939826
+  - 名词解释：https://pay.weixin.qq.com/doc/v2/merchant/4011939975
+  - 参数规定：https://pay.weixin.qq.com/doc/v2/merchant/4011941162
+  - 最佳安全实践：https://pay.weixin.qq.com/doc/v2/merchant/4011941549
+  - 安全与网络相关注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984638
+  - HTTPS服务器配置：https://pay.weixin.qq.com/doc/v2/merchant/4012197402
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984682
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984721
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984794
+  - 支付验收指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984810
+  - 跨城冗灾方案：https://pay.weixin.qq.com/doc/v2/merchant/4011984887
+- 目录树相关页：
+  - 通用规则 > 接入规范：https://pay.weixin.qq.com/doc/v2/merchant/4011937022
+  - 通用规则 > 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 通用规则 > 名词表：https://pay.weixin.qq.com/doc/v2/merchant/4011937188
+  - 通用规则 > API安全：https://pay.weixin.qq.com/doc/v2/merchant/4011937214
+  - 通用规则 > 最佳实践：https://pay.weixin.qq.com/doc/v2/merchant/4011937221
+  - 通用规则 > 最佳实践 > 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984682
+  - 通用规则 > 最佳实践 > 回调通知注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984721
+  - 通用规则 > 最佳实践 > 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984794
+  - 通用规则 > 最佳实践 > 支付验收指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984810
+  - 通用规则 > 最佳实践 > 跨城冗灾方案：https://pay.weixin.qq.com/doc/v2/merchant/4011984887
+- 页面内关键官方链接：
+  - 微信支付查单接口：https://pay.weixin.qq.com/doc/v2/merchant/4011935215
+  - JSAPI支付（原公众号支付）：https://pay.weixin.qq.com/doc/v2/merchant/4011935213
+  - 小程序支付：https://pay.weixin.qq.com/doc/v2/merchant/4011939566
+  - APP支付：https://pay.weixin.qq.com/doc/v2/merchant/4011936836
+  - 接口规范：https://pay.weixin.qq.com/doc/v2/merchant/4011935221
+  - 注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984721
+  - 关单接口：https://pay.weixin.qq.com/doc/v2/merchant/4011935216
+  - 微信支付对账单下载接口：https://pay.weixin.qq.com/doc/v2/merchant/4011935219
+
+## 支付验收指引
+
+- URL：https://pay.weixin.qq.com/doc/v2/merchant/4011984810
+- 官方更新时间：2025.03.21
+- 页面大纲：
+  - 阅读对象
+  - 测试说明
+  - 一、概述
+  - 二、仿真测试系统
+  - 三、测试流程
+  - 测试用例
+- 侧边栏子文档：
+  - 商户收银台H5大字号规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939746
+  - 微信支付二维码规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939778
+  - 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 支付模式：https://pay.weixin.qq.com/doc/v2/merchant/4011939826
+  - 名词解释：https://pay.weixin.qq.com/doc/v2/merchant/4011939975
+  - 参数规定：https://pay.weixin.qq.com/doc/v2/merchant/4011941162
+  - 最佳安全实践：https://pay.weixin.qq.com/doc/v2/merchant/4011941549
+  - 安全与网络相关注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984638
+  - HTTPS服务器配置：https://pay.weixin.qq.com/doc/v2/merchant/4012197402
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984682
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984721
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984794
+  - 支付验收指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984810
+  - 跨城冗灾方案：https://pay.weixin.qq.com/doc/v2/merchant/4011984887
+- 目录树相关页：
+  - 通用规则 > 接入规范：https://pay.weixin.qq.com/doc/v2/merchant/4011937022
+  - 通用规则 > 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 通用规则 > 名词表：https://pay.weixin.qq.com/doc/v2/merchant/4011937188
+  - 通用规则 > API安全：https://pay.weixin.qq.com/doc/v2/merchant/4011937214
+  - 通用规则 > 最佳实践：https://pay.weixin.qq.com/doc/v2/merchant/4011937221
+  - 通用规则 > 最佳实践 > 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984682
+  - 通用规则 > 最佳实践 > 回调通知注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984721
+  - 通用规则 > 最佳实践 > 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984794
+  - 通用规则 > 最佳实践 > 支付验收指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984810
+  - 通用规则 > 最佳实践 > 跨城冗灾方案：https://pay.weixin.qq.com/doc/v2/merchant/4011984887
+- 页面内关键官方链接：
+  - API接口文档：https://pay.weixin.qq.com/doc/v2/merchant/4011936530
+
+## 跨城冗灾方案
+
+- URL：https://pay.weixin.qq.com/doc/v2/merchant/4011984887
+- 官方更新时间：2025.03.21
+- 页面大纲：
+  - 简介
+  - 商户实现跨城冗灾整体流程
+  - 专线商户方案
+  - 公网商户方案
+  - 验证
+  - 升级说明
+  - 微信支付回调通知商户
+  - 专线冗灾演练
+  - QA
+- 侧边栏子文档：
+  - 商户收银台H5大字号规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939746
+  - 微信支付二维码规范：https://pay.weixin.qq.com/doc/v2/merchant/4011939778
+  - 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 支付模式：https://pay.weixin.qq.com/doc/v2/merchant/4011939826
+  - 名词解释：https://pay.weixin.qq.com/doc/v2/merchant/4011939975
+  - 参数规定：https://pay.weixin.qq.com/doc/v2/merchant/4011941162
+  - 最佳安全实践：https://pay.weixin.qq.com/doc/v2/merchant/4011941549
+  - 安全与网络相关注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984638
+  - HTTPS服务器配置：https://pay.weixin.qq.com/doc/v2/merchant/4012197402
+  - 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984682
+  - 回调通知注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984721
+  - 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984794
+  - 支付验收指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984810
+  - 跨城冗灾方案：https://pay.weixin.qq.com/doc/v2/merchant/4011984887
+- 目录树相关页：
+  - 通用规则 > 接入规范：https://pay.weixin.qq.com/doc/v2/merchant/4011937022
+  - 通用规则 > 安全规范：https://pay.weixin.qq.com/doc/v2/merchant/4011985891
+  - 通用规则 > 名词表：https://pay.weixin.qq.com/doc/v2/merchant/4011937188
+  - 通用规则 > API安全：https://pay.weixin.qq.com/doc/v2/merchant/4011937214
+  - 通用规则 > 最佳实践：https://pay.weixin.qq.com/doc/v2/merchant/4011937221
+  - 通用规则 > 最佳实践 > 支付回调和查单实现指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984682
+  - 通用规则 > 最佳实践 > 回调通知注意事项：https://pay.weixin.qq.com/doc/v2/merchant/4011984721
+  - 通用规则 > 最佳实践 > 专线商户Notify升级指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984794
+  - 通用规则 > 最佳实践 > 支付验收指引：https://pay.weixin.qq.com/doc/v2/merchant/4011984810
+  - 通用规则 > 最佳实践 > 跨城冗灾方案：https://pay.weixin.qq.com/doc/v2/merchant/4011984887
+- 页面内关键官方链接：
+  - 社区QA：https://developers.weixin.qq.com/community/pay/doc/000ae006fe0b38c83468b256651008
+
+## 总览
+
+- URL：https://pay.weixin.qq.com/doc/v2/merchant/4011985481
+- 官方更新时间：2026.03.18
+- 侧边栏子文档：
+  - 总览：https://pay.weixin.qq.com/doc/v2/merchant/4011985481
+- 目录树相关页：
+  - 更新日志 > 总览：https://pay.weixin.qq.com/doc/v2/merchant/4011985481
+- 页面内关键官方链接：
+  - H5纯签约：https://pay.weixin.qq.com/doc/v2/merchant/4011987295
+  - 支付中签约：https://pay.weixin.qq.com/doc/v2/merchant/4011987320

@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信小程序原生开发"
+  short_description: "按需查阅微信开放文档，处理原生小程序开发、调试、发布、性能与合规问题"
+  default_prompt: "Use $wechat-miniprogram for WeChat Mini Program native development, debugging, code review, release, privacy/compliance, and official-doc routing."
